@@ -63,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/rose"
+                android:onClick="plantSpecificationButton"
                 android:text="@string/plant1"
                 tools:text="plant1"/>
 
