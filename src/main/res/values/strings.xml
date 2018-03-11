@@ -3,19 +3,19 @@
     <string name="plants_of_ci">Plants of CI</string>
     <string name="interactive_map">Interactive Map</string>
     <string name="plant_search">Plant Search</string>
-    <string name="about"> About Page</string>
-    <string name="dolphin"> dolphin icon</string>
+    <string name="about">About Page</string>
+    <string name="dolphin">dolphin icon</string>
     <string name="search_list">Search List</string>
-    <string name="plant1" />
-    <string name="plant2" />
-    <string name="plant3" />
-    <string name="plant4" />
-    <string name="plant5" />
-    <string name="plant6" />
-    <string name="plant7" />
-    <string name="plant8" />
-    <string name="plant9" />
-    <string name="central_map" />
-
+    <string name="plant1"/>
+    <string name="plant2"/>
+    <string name="plant3"/>
+    <string name="plant4"/>
+    <string name="plant5"/>
+    <string name="plant6"/>
+    <string name="plant7"/>
+    <string name="plant8"/>
+    <string name="plant9"/>
+    <string name="central_map"/>
+    <string name="about_description">Plants of CI was conceived in the forges of COMP 350. Its creators are Steven Romp, Ricky Medrano, Tyler Allen, and Travis Wight.</string>
 
 </resources>

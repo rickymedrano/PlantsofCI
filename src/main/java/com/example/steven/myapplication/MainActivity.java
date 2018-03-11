@@ -1,10 +1,9 @@
 package com.example.steven.myapplication;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,5 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void plantSearchButton(View view) {
         startActivity(new Intent(this, PlantSearch.class));
+    }
+
+    public void aboutButton(View view){
+        startActivity(new Intent(this, AboutPage.class));
     }
 }

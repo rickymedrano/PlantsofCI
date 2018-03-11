@@ -25,15 +25,16 @@
         <activity
             android:name=".CentralMap"
             android:label="@string/central_map"/>
-
-        <activity android:name=".PlantSpecification"
-                  android:label="plant_specification"/>
+        <activity
+            android:name=".PlantSpecification"
+            android:label="plant_specification"/>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts"/>
 
-
+        <activity android:name=".AboutPage">
+        </activity>
     </application>
 
 </manifest>
