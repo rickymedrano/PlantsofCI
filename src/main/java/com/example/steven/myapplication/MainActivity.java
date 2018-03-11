@@ -6,14 +6,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+    DatabaseHelperClass myDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_page);
+        myDB = new DatabaseHelperClass(this);
     }
-
-
+    
     public void interactiveMapButton(View view) {
         startActivity(new Intent(this, InteractiveMap.class));
     }
