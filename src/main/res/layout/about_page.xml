@@ -5,15 +5,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutPage" tools:layout_editor_absoluteY="25dp">
+    tools:context=".AboutPage"
+    tools:layout_editor_absoluteY="25dp">
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:layout_marginTop="16dp"
-        android:text="About Page" android:textAlignment="center"
-        android:textSize="30sp" app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="About Page"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
     <ImageView
@@ -25,14 +30,17 @@
         android:contentDescription="TODO"
         android:src="@drawable/trump_cheetos_orange"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"/>
     <TextView
         android:id="@+id/textView7"
         android:layout_width="310dp"
-        android:layout_height="233dp" android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp" android:text="TextView"
+        android:layout_height="233dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
         android:textAlignment="textStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
