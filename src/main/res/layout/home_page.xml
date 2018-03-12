@@ -58,9 +58,9 @@
         android:layout_marginBottom="24dp"
         android:layout_marginEnd="40dp"
         android:contentDescription="@string/about"
+        android:onClick="aboutButton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_info_details"/>
+        app:layout_constraintEnd_toEndOf="parent" app:srcCompat="@android:drawable/ic_menu_info_details"/>
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"

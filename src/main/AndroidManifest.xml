@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.steven.myapplication">
+          package="com.example.steven.myapplication">
 
     <application
         android:allowBackup="true"
@@ -11,26 +11,30 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".InteractiveMap"
-            android:label="@string/interactive_map" />
+            android:label="@string/interactive_map"/>
         <activity
             android:name=".PlantSearch"
-            android:label="@string/plant_search" />
+            android:label="@string/plant_search"/>
         <activity
             android:name=".CentralMap"
-            android:label="@string/central_map" />
+            android:label="@string/central_map"/>
+        <activity
+            android:name=".PlantSpecification"
+            android:label="plant_specification"/>
 
         <meta-data
             android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+            android:resource="@array/preloaded_fonts"/>
 
-        <activity android:name=".PlantSpec"></activity>
+        <activity android:name=".AboutPage">
+        </activity>
     </application>
 
 </manifest>

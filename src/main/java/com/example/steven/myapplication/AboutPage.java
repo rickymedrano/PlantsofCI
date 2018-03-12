@@ -1,13 +1,13 @@
 package com.example.steven.myapplication;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-public class PlantSpec extends AppCompatActivity {
+public class AboutPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_plant_spec);
+        setContentView(R.layout.about_page);
     }
 }
