@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plantdata>
+	<!--<title type="text">Plant Database</title>-->
+	<entry>
+		<plantid></plantid>
+		<commonname></commonname>
+		<speciesname></speciesname>
+		<origin></origin>
+		<flowercolor></flowercolor>
+		<bloomseason></bloomseason>
+		<height></height>
+		<width></width>
+		<location></location>
+		<gps></gps>
+		<pictureid></pictureid>
+	</entry>
+	<!--
+	so on and so forth...
+	-->
+</plantdata>
