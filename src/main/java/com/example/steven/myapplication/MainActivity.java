@@ -9,12 +9,14 @@ import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 
 @SuppressWarnings("ALL")
 public class MainActivity extends AppCompatActivity {
     DatabaseHelperClass myDB; //SQLite Database
     private static final int ERROR_DIALOG_REQUEST = 9001; // used when requesting certain dialogue boxes
-    GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         if(servicesOk())
         {
             startActivity(new Intent(this, InteractiveMap.class));
-            Toast.makeText(this, "Ready to map!", Toast.LENGTH_SHORT).show();
         }
     }
 
