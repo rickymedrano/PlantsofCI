@@ -15,6 +15,7 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.MapStyleOptions;
 
 
 /**
@@ -40,7 +41,10 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+        googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+
+        // remove google places icons
+        googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.style_json));
 
         // check to ensure user has granted permission for location
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -62,6 +66,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         // constrain the camera target to the CI campus bounds.
         googleMap.setLatLngBoundsForCameraTarget(CI);
         googleMap.setMinZoomPreference((float) 16);
+
 
         // set other flags
         googleMap.setTrafficEnabled(false);
@@ -113,8 +118,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
                         mGoogleMap.setMyLocationEnabled(true);
                     }
                 } else {
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
+                    // permission denied,Disable the functionality that depends on this permission.
                     Toast.makeText(this, "permission denied", Toast.LENGTH_LONG).show();
                 }
             }
