@@ -13,9 +13,11 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 
 /**
@@ -72,7 +74,14 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         googleMap.setTrafficEnabled(false);
         googleMap.setIndoorEnabled(false);
         googleMap.setBuildingsEnabled(true);
-        googleMap.getUiSettings().setZoomControlsEnabled(true);
+        googleMap.getUiSettings().setZoomControlsEnabled(false);
+        googleMap.getUiSettings().setMyLocationButtonEnabled(false);
+        googleMap.getUiSettings().setMapToolbarEnabled(false);
+
+        // set markers, plants, buildings, etc.
+        googleMap.addMarker(new MarkerOptions().position(new LatLng(34.162081, -119.043616)).
+                title("Channel Islands")).setIcon();
+
     }
 
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
