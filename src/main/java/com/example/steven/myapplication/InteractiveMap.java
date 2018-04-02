@@ -9,9 +9,12 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 
 
 /**
@@ -52,6 +55,15 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
             googleMap.setMyLocationEnabled(true);
         }
 
+        // create LatLngBounds for the CI campus
+        LatLngBounds CI = new LatLngBounds(new LatLng(34.161593, -119.049312),
+                new LatLng(34.163393, -119.038105));
+
+        // constrain the camera target to the CI campus bounds.
+        googleMap.setLatLngBoundsForCameraTarget(CI);
+        googleMap.setMinZoomPreference((float) 16);
+
+        // set other flags
         googleMap.setTrafficEnabled(false);
         googleMap.setIndoorEnabled(false);
         googleMap.setBuildingsEnabled(true);
@@ -106,18 +118,6 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
                     Toast.makeText(this, "permission denied", Toast.LENGTH_LONG).show();
                 }
             }
-
-//    private boolean initializeMap()
-//    {
-//        if(mMap == null)
-//        {
-//            MapFragment mapFragment = (MapFragment) getFragmentManager()
-//                    .findFragmentById(R.id.interactive_map);
-//            mapFragment.getMapAsync((OnMapReadyCallback) this);
-//        }
-//        return (mMap != null);
-//    }
-
         }
     }
 }
