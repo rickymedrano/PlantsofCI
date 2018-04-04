@@ -1,6 +1,7 @@
 package com.example.steven.myapplication;
 
 import android.Manifest;
+import android.animation.Animator;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,21 +12,30 @@ import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.OnCameraChangeListener;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * Created by Tyler on 3/5/2018.
  */
 
+@SuppressWarnings("ALL")
 public class InteractiveMap extends FragmentActivity implements OnMapReadyCallback {
+    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     GoogleMap mGoogleMap;
+    List<Marker> mMarkerList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +47,26 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
             checkLocationPermission();
         }
 
-        MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.interactive_map);
+        MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(
+                R.id.interactive_map);
         mapFragment.getMapAsync(this);
+
+        mGoogleMap.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
+            @Override
+            public void onCameraChange(CameraPosition cameraPosition) {
+                for (Marker marker : mMarkerList) {
+                    marker.setVisible(cameraPosition.zoom > 16);
+                }
+            }
+        });
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+
+        // add markers for buildings and plants
+        addMapMarkers(googleMap);
 
         // remove google places icons
         googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.style_json));
@@ -77,14 +100,14 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         googleMap.getUiSettings().setZoomControlsEnabled(false);
         googleMap.getUiSettings().setMyLocationButtonEnabled(false);
         googleMap.getUiSettings().setMapToolbarEnabled(false);
-
-        // set markers, plants, buildings, etc.
-        googleMap.addMarker(new MarkerOptions().position(new LatLng(34.162081, -119.043616)).
-                title("Channel Islands")).setIcon();
-
     }
 
-    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
+    public void addMapMarkers(GoogleMap googleMap) {
+        Marker marker = googleMap.addMarker(
+                new MarkerOptions().position(new LatLng(34.162081, -119.043616)).
+                        title("Channel Islands"));
+        mMarkerList.add(marker);
+    }
 
     public boolean checkLocationPermission() {
         if (ContextCompat.checkSelfPermission(this,

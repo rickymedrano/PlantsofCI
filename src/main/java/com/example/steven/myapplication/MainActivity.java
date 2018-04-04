@@ -13,6 +13,7 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 
+
 @SuppressWarnings("ALL")
 public class MainActivity extends AppCompatActivity {
     DatabaseHelperClass myDB; //SQLite Database
