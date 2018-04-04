@@ -80,7 +80,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
 
         // set markers, plants, buildings, etc.
         googleMap.addMarker(new MarkerOptions().position(new LatLng(34.162081, -119.043616)).
-                title("Channel Islands")).setIcon();
+                title("Channel Islands"));
 
     }
 
