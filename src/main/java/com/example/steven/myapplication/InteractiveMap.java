@@ -13,6 +13,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnCameraChangeListener;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
@@ -176,6 +177,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
             Marker marker = googleMap.addMarker(
                     new MarkerOptions().position(building).title(buildingName));
             mMarkerList.add(marker);
+            // icon( BitmapDescriptorFactory.fromResource(R.drawable.house)))
         }
     }
 
