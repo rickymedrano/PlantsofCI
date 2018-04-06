@@ -44,11 +44,10 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
             checkLocationPermission();
         }
 
+        // create the map
         MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(
                 R.id.interactive_map);
         mapFragment.getMapAsync(this);
-
-
     }
 
     @Override
@@ -75,8 +74,8 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         }
 
         // create LatLngBounds for the CI campus
-        LatLngBounds CI = new LatLngBounds(new LatLng(34.161593, -119.049312),
-                new LatLng(34.163393, -119.038105));
+        LatLngBounds CI = new LatLngBounds(new LatLng(34.159002, -119.048463 ),
+                new LatLng(34.165051, -119.040445));
 
         CameraPosition cameraPosition = new CameraPosition.Builder().target(
                 new LatLng(34.162081, -119.043616)).zoom(16).build();
@@ -171,7 +170,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         LatLng YUBA_HALL = new LatLng(34.163986, -119.041088);
         buildingList.add(YUBA_HALL);
 
-        for (int buildingIndex = 0; buildingIndex < numberOfBuildings; buildingIndex++) {
+        for (int buildingIndex = 0; buildingIndex <= numberOfBuildings; buildingIndex++) {
             LatLng building = buildingList.get(buildingIndex);
             String buildingName = buildingNames[buildingIndex];
             Marker marker = googleMap.addMarker(
