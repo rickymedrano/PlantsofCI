@@ -175,7 +175,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
             LatLng building = buildingList.get(buildingIndex);
             String buildingName = buildingNames[buildingIndex];
             Marker marker = googleMap.addMarker(
-                    new MarkerOptions().position(building).title(buildingName));
+                    new MarkerOptions().position(building).title(buildingName).icon(BitmapDescriptorFactory.fromResource(R.drawable.flower_marker)));
             mMarkerList.add(marker);
             // icon( BitmapDescriptorFactory.fromResource(R.drawable.house)))
         }
