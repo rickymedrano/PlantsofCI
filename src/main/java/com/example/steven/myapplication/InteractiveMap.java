@@ -94,9 +94,6 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         googleMap.getUiSettings().setMapToolbarEnabled(false);
 
         // set markers, plants, buildings, etc.
-        googleMap.addMarker(new MarkerOptions().position(new LatLng(34.162081, -119.043616)).
-                title("Channel Islands"));
-
         googleMap.setOnCameraChangeListener(new OnCameraChangeListener() {
             @Override
             public void onCameraChange(CameraPosition cameraPosition) {
@@ -181,7 +178,6 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
             Marker marker = googleMap.addMarker(
                     new MarkerOptions().position(building).title(buildingName).icon(BitmapDescriptorFactory.fromResource(R.drawable.building_marker)));
             mMarkerList.add(marker);
-            // icon( BitmapDescriptorFactory.fromResource(R.drawable.house)))
         }
     }
 
