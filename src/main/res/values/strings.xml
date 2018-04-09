@@ -3,19 +3,23 @@
     <string name="plants_of_ci">Plants of CI</string>
     <string name="interactive_map">Interactive Map</string>
     <string name="plant_search">Plant Search</string>
-    <string name="about"> About Page</string>
-    <string name="dolphin"> dolphin icon</string>
+    <string name="about">About Page</string>
+    <string name="dolphin">dolphin icon</string>
     <string name="search_list">Search List</string>
-    <string name="plant1" />
-    <string name="plant2" />
-    <string name="plant3" />
-    <string name="plant4" />
-    <string name="plant5" />
-    <string name="plant6" />
-    <string name="plant7" />
-    <string name="plant8" />
-    <string name="plant9" />
     <string name="central_map"/>
-
+    <string name="african_tulip_tree">African Tulip Tree</string>
+    <string name="plant2">plant2</string>
+    <string name="plant3">plant3</string>
+    <string name="plant4">plant4</string>
+    <string name="plant5">plant5</string>
+    <string name="plant6">plant6</string>
+    <string name="plant7">plant7</string>
+    <string name="plant8">plant8</string>
+    <string name="plant9">plant9</string>
+    <string
+        name="plants_of_ci_was_conceived_in_the_forges_of_comp_350_its_creators_are_steven_romp_ricky_medrano_tyler_allen_and_travis_wight">
+        Plants of CI was conceived in the forges of COMP 350. Its creators are Steven Romp, Ricky
+        Medrano, Tyler Allen, and Travis Wight.
+    </string>
 
 </resources>

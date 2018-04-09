@@ -62,9 +62,10 @@
                 android:id="@+id/button1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/rose"
-                android:text="@string/plant1"
-                tools:text="plant1"/>
+                android:drawableLeft="@drawable/african_tulip_tree_icon"
+                android:onClick="plantSpecificationButton"
+                android:text="@string/african_tulip_tree"
+                android:drawableStart="@drawable/african_tulip_tree_icon" />
 
 
             <Button
@@ -73,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/rose"
                 android:text="@string/plant2"
-                tools:text="plant2"/>
+                android:drawableStart="@drawable/rose" />
 
             <Button
                 android:id="@+id/button3"
@@ -81,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/rose"
                 android:text="@string/plant3"
-                tools:text="plant3"/>
+                android:drawableStart="@drawable/rose" />
 
             <Button
                 android:id="@+id/button4"
@@ -89,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/rose"
                 android:text="@string/plant4"
-                tools:text="plant4"/>
+                android:drawableStart="@drawable/rose" />
 
             <Button
                 android:id="@+id/button5"
@@ -97,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/rose"
                 android:text="@string/plant5"
-                tools:text="plant5"/>
+                android:drawableStart="@drawable/rose" />
 
             <Button
                 android:id="@+id/button6"
@@ -105,31 +106,28 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/rose"
                 android:text="@string/plant6"
-                tools:text="plant6"/>
+                android:drawableStart="@drawable/rose" />
 
             <Button
                 android:id="@+id/button7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/rose"
-                android:text="@string/plant7"
-                tools:text="plant7"/>
+                android:text="@string/plant7"/>
 
             <Button
                 android:id="@+id/button8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/rose"
-                android:text="@string/plant8"
-                tools:text="plant8"/>
+                android:text="@string/plant8"/>
 
             <Button
                 android:id="@+id/button9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/rose"
-                android:text="@string/plant9"
-                tools:text="plant9"/>
+                android:text="@string/plant9"/>
         </LinearLayout>
     </ScrollView>
 
