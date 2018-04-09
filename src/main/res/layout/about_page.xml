@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AboutPage"
-    tools:layout_editor_absoluteY="25dp">
+    tools:layout_editor_absoluteY="25dp"
+    android:background="@color/light_cream">
 
     <TextView
         android:id="@+id/textView6"
@@ -16,6 +17,7 @@
         android:text="About Page"
         android:textAlignment="center"
         android:textSize="30sp"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -27,8 +29,7 @@
         android:layout_height="298dp"
         android:layout_marginTop="16dp"
         android:adjustViewBounds="true"
-        android:contentDescription="TODO"
-        android:src="@drawable/trump_cheetos_orange"
+        android:src="@drawable/ekho_main"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -40,8 +41,9 @@
         android:layout_height="233dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/plants_of_ci_was_conceived_in_the_forges_of_comp_350_its_creators_are_steven_romp_ricky_medrano_tyler_allen_and_travis_wight"
+        android:text="@string/aboutPage"
         android:textAlignment="textStart"
+        android:textColor="@color/colorBlack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

@@ -38,9 +38,6 @@
             android:name=".PlantSearch"
             android:label="@string/plant_search"/>
         <activity
-            android:name=".CentralMap"
-            android:label="@string/central_map"/>
-        <activity
             android:name=".PlantSpecification"
             android:label="plant_specification"/>
 
