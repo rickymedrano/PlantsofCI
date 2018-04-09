@@ -40,12 +40,11 @@
         android:layout_height="233dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="@string/plants_of_ci_was_conceived_in_the_forges_of_comp_350_its_creators_are_steven_romp_ricky_medrano_tyler_allen_and_travis_wight"
         android:textAlignment="textStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        tools:text="@string/about_description"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"/>
 </android.support.constraint.ConstraintLayout>
