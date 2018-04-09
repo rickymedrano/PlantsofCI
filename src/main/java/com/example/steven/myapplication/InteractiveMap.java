@@ -1,12 +1,14 @@
 package com.example.steven.myapplication;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
@@ -29,11 +31,14 @@ import java.util.List;
  * Created by Tyler on 3/5/2018.
  */
 
+// http://www.zoftino.com/google-maps-android-custom-info-window-example
+
 @SuppressWarnings("ALL")
 public class InteractiveMap extends FragmentActivity implements OnMapReadyCallback {
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     GoogleMap mGoogleMap;
-    List<Marker> mMarkerList = new ArrayList<>();
+    List<Marker> buildingMarkerList = new ArrayList<>();
+    List<Marker> plantMarkerList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,11 +98,27 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         googleMap.getUiSettings().setMyLocationButtonEnabled(false);
         googleMap.getUiSettings().setMapToolbarEnabled(false);
 
+        // set markers, plants, buildings, etc.
         googleMap.setOnCameraChangeListener(new OnCameraChangeListener() {
             @Override
             public void onCameraChange(CameraPosition cameraPosition) {
-                for (Marker m : mMarkerList) {
+
+                for (Marker m : buildingMarkerList ) {
                     m.setVisible(cameraPosition.zoom >= 16 && cameraPosition.zoom <= 19);
+                }
+                for (Marker m : plantMarkerList) {
+                    m.setVisible(cameraPosition.zoom >= 19);
+                }
+            }
+        });
+
+
+        googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+            @Override
+            public void onInfoWindowClick(Marker marker) {
+                if(marker.getTitle().equals("Lavatera maritima")) {
+                    Intent intent = new Intent(InteractiveMap.this, PlantSpecification.class);
+                    startActivity(intent);
                 }
             }
         });
@@ -176,9 +197,15 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
             String buildingName = buildingNames[buildingIndex];
             Marker marker = googleMap.addMarker(
                     new MarkerOptions().position(building).title(buildingName).icon(BitmapDescriptorFactory.fromResource(R.drawable.building_marker)));
-            mMarkerList.add(marker);
-            // icon( BitmapDescriptorFactory.fromResource(R.drawable.house)))
+            buildingMarkerList.add(marker);
         }
+
+        // add plants to the marker list, temporary till I can pull from database
+        LatLng plantLocation = new LatLng(34.162637, -119.042980);
+        String plantString = "Lavatera maritima";
+        Marker marker = googleMap.addMarker(
+                new MarkerOptions().position(plantLocation).title(plantString).icon(BitmapDescriptorFactory.fromResource(R.drawable.flower_marker)));
+        plantMarkerList.add(marker);
     }
 
     public boolean checkLocationPermission() {
