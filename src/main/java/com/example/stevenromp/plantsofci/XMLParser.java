@@ -87,7 +87,7 @@ public class XMLParser {
 
         // Parses the contents of an entry. If it encounters a title, summary, or link tag, hands them off
 // to their respective "read" methods for processing. Otherwise, skips the tag.
-        private com.example.stevenromp.plantsofci.XMLParser.Entry readEntry(XmlPullParser parser) throws XmlPullParserException, IOException {
+        private Entry readEntry(XmlPullParser parser) throws XmlPullParserException, IOException {
             parser.require(XmlPullParser.START_TAG, ns, "entry");
             String plantid = null;
             String commonname = null;

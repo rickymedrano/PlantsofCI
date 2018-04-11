@@ -64,8 +64,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/african_tulip_tree_icon"
                 android:onClick="plantSpecificationButton"
-                android:text="@string/african_tulip_tree"
-                android:drawableStart="@drawable/african_tulip_tree_icon" />
+                android:text="@string/african_tulip_tree" />
 
 
             <Button
@@ -73,40 +72,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/rose"
-                android:text="@string/plant2"
-                android:drawableStart="@drawable/rose" />
+                android:text="@string/plant2"/>
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/rose"
-                android:text="@string/plant3"
-                android:drawableStart="@drawable/rose" />
+                android:text="@string/plant3"/>
 
             <Button
                 android:id="@+id/button4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/rose"
-                android:text="@string/plant4"
-                android:drawableStart="@drawable/rose" />
+                android:text="@string/plant4"/>
 
             <Button
                 android:id="@+id/button5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/rose"
-                android:text="@string/plant5"
-                android:drawableStart="@drawable/rose" />
+                android:text="@string/plant5"/>
 
             <Button
                 android:id="@+id/button6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/rose"
-                android:text="@string/plant6"
-                android:drawableStart="@drawable/rose" />
+                android:text="@string/plant6"/>
 
             <Button
                 android:id="@+id/button7"
