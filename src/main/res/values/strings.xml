@@ -16,8 +16,8 @@
     <string name="plant7">plant7</string>
     <string name="plant8">plant8</string>
     <string name="plant9">plant9</string>
-    <string name="aboutPage">Plants of CI is an app created by Ricky Medrano, Tyler Allen, Steven
-        Romp, and Travis Wight for Comp 350. Art is done by Sierra Lillian (SierraLillianArt).
+    <string name="aboutPage">Created by Ricky Medrano, Tyler Allen, Steven
+        Romp, and Travis Wight for Comp 350. \nArt is done by Sierra Lillian (SierraLillianArt).
     </string>
 
 </resources>
