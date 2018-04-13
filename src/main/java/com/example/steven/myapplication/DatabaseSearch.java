@@ -12,11 +12,15 @@ import java.util.List;
  */
 
 public class DatabaseSearch{
-    private List<XMLParser.Entry> database = new ArrayList<>();
+    public List<XMLParser.Entry> database = new ArrayList<>();
 
     public DatabaseSearch(InputStream in, XMLParser xml) throws XmlPullParserException, IOException {
-        // InputStream needs to be called in activity that needs to access the database
+        // InputStream needs to be called in activity that accesses the database
         this.database = xml.parse(in);
+    }
+
+    public List<XMLParser.Entry> getFullDatabase(){
+        return database;
     }
 
     public XMLParser.Entry getEntry(EntryValue<String> common){
@@ -32,55 +36,12 @@ public class DatabaseSearch{
         return result;
     }
 
-    public List<XMLParser.Entry> getAllEntriesWithTagValue(String tag, EntryValue value){
+    public List<XMLParser.Entry> getAllEntriesWithValue(EntryValue value){
         List<XMLParser.Entry> entries = null;
 
-        // TODO: Write function that returns a List of Entries with equal tag values
+        // TODO: Write function that returns a List of Entries with equal Entry Values
 
-        switch (tag){
-            case "plantid":
 
-                break;
-            case "commonname":
-
-                break;
-            case "speciesname":
-
-                break;
-            case "origin":
-
-                break;
-            case "flowercolor":
-
-                break;
-            case "bloomseason":
-
-                break;
-            case "width":
-
-                break;
-            case "height":
-
-                break;
-            case "drought":
-
-                break;
-            case "location":
-
-                break;
-            case "gps":
-
-                break;
-            case "pictureid":
-
-                break;
-            case "summary":
-
-                break;
-            default:
-
-                break;
-        }
 
         return entries;
     }

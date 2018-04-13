@@ -18,7 +18,6 @@ public class XMLParser {
     private final String ns = null;
 
     public List<Entry> parse(InputStream in) throws XmlPullParserException, IOException {
-        System.out.print("before try");
         try {
             XmlPullParser parser = Xml.newPullParser();
             parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
@@ -33,7 +32,7 @@ public class XMLParser {
     private List<Entry> readFeed(XmlPullParser parser) throws XmlPullParserException, IOException {
         List<Entry> entries = new ArrayList<>();
 
-        parser.require(XmlPullParser.START_TAG, ns, "entry");
+        parser.require(XmlPullParser.START_TAG, ns, "plantdata");
         while (parser.next() != XmlPullParser.END_TAG) {
             if (parser.getEventType() != XmlPullParser.START_TAG) {
                 continue;
@@ -51,23 +50,22 @@ public class XMLParser {
 
     public static class Entry
     {
-        public final EntryValue plantid;
-        public final EntryValue commonname;
-        public final EntryValue speciesname;
-        public final EntryValue origin;
-        public final EntryValue flowercolor;
-        public final EntryValue bloomseason;
-        public final EntryValue width;
-        public final EntryValue height;
-        public final EntryValue drought;
-        public final EntryValue location;
-        public final EntryValue gps;
-        public final EntryValue pictureid;
-        public final EntryValue summary;
+        public final EntryValue<Integer> plantid;
+        public final EntryValue<String> commonname;
+        public final EntryValue<String> speciesname;
+        public final EntryValue<String> origin;
+        public final EntryValue<String> flowercolor;
+        public final EntryValue<String> bloomseason;
+        public final EntryValue<String> width;
+        public final EntryValue<String> height;
+        public final EntryValue<String> drought;
+        public final EntryValue<String[]> location;
+        public final EntryValue<Float[]> gps;
+        public final EntryValue<String[]> pictureid;
 
-        private Entry(EntryValue plantid, EntryValue commonname, EntryValue speciesname, EntryValue origin,
-                      EntryValue flowercolor, EntryValue bloomseason, EntryValue width, EntryValue height, EntryValue drought,
-                      EntryValue location, EntryValue gps, EntryValue pictureid, EntryValue summary)
+        private Entry(EntryValue<Integer> plantid, EntryValue<String> commonname, EntryValue<String> speciesname, EntryValue<String> origin,
+                EntryValue<String> flowercolor, EntryValue<String> bloomseason, EntryValue<String> width, EntryValue<String> height, EntryValue<String> drought,
+                EntryValue<String[]> location, EntryValue<Float[]> gps, EntryValue<String[]> pictureid)
         {
             this.plantid = plantid;
             this.commonname = commonname;
@@ -81,12 +79,11 @@ public class XMLParser {
             this.location = location;
             this.gps = gps;
             this.pictureid = pictureid;
-            this.summary = summary;
 
         }
 
         public EntryValue<Integer> getPlantID() { return this.plantid; }
-        public EntryValue<String> getCommonName(){ return this.plantid; }
+        public EntryValue<String> getCommonName(){ return this.commonname; }
         public EntryValue<String> getSpeciesName() { return this.speciesname;}
         public EntryValue<String> getOrigin(){ return this.origin; }
         public EntryValue<String> getFlowerColor(){ return this.flowercolor;}
@@ -94,27 +91,27 @@ public class XMLParser {
         public EntryValue<String> getPlantWidth(){ return this.width; }
         public EntryValue<String> getPlantHeight(){ return this.height; }
         public EntryValue<String> getDrought(){ return this.drought; }
-
-
+        public EntryValue<String[]> getLocation(){ return this.location; }
+        public EntryValue<Float[]> getGPS(){ return this.gps; }
+        public EntryValue<String[]> getPictureID(){ return this.pictureid; }
     }
 
     // Parses the contents of an entry. If it encounters a title, summary, or link tag, hands them off
 // to their respective "read" methods for processing. Otherwise, skips the tag.
     private Entry readEntry(XmlPullParser parser) throws XmlPullParserException, IOException {
         parser.require(XmlPullParser.START_TAG, ns, "entry");
-        EntryValue plantid = null;
-        EntryValue commonname = null;
-        EntryValue speciesname = null;
-        EntryValue origin = null;
-        EntryValue flowercolor = null;
-        EntryValue bloomseason = null;
-        EntryValue width = null;
-        EntryValue height = null;
-        EntryValue drought = null;
-        EntryValue location = null;
-        EntryValue gps = null;
-        EntryValue pictureid = null;
-        EntryValue summary = null;
+        EntryValue<Integer> plantid = null;
+        EntryValue<String> commonname = null;
+        EntryValue<String> speciesname = null;
+        EntryValue<String> origin = null;
+        EntryValue<String> flowercolor = null;
+        EntryValue<String> bloomseason = null;
+        EntryValue<String> width = null;
+        EntryValue<String> height = null;
+        EntryValue<String> drought = null;
+        EntryValue<String[]> location = null;
+        EntryValue<Float[]> gps = null;
+        EntryValue<String[]> pictureid = null;
 
         while (parser.next() != XmlPullParser.END_TAG) {
             if (parser.getEventType() != XmlPullParser.START_TAG) {
@@ -158,9 +155,6 @@ public class XMLParser {
                 case "pictureid":
                     pictureid = readPicture(parser);
                     break;
-                case "summary":
-                    pictureid = readSummary(parser);
-                    break;
                 default:
                     skip(parser);
                     break;
@@ -168,7 +162,7 @@ public class XMLParser {
         }
         return new Entry(plantid, commonname, speciesname, origin,
                 flowercolor, bloomseason, width,height, drought, location,
-                gps, pictureid, summary);
+                gps, pictureid);
     }
 
     // Processes plantid tags in the feed.
@@ -281,7 +275,7 @@ public class XMLParser {
         String[] rawToArray = rawText.split(",");
         Float[] rawToArrayFloat = new Float[2];
 
-        for (int index = 0; index < rawText.length(); index++){
+        for (int index = 0; index < 2; index++){
             rawToArrayFloat[index] = Float.parseFloat(rawToArray[index]);
         }
 
@@ -300,16 +294,6 @@ public class XMLParser {
 
         parser.require(XmlPullParser.END_TAG, ns, "pictureid");
         return pictureid;
-    }
-    // Processes summary tags in the feed.
-    private EntryValue<String> readSummary(XmlPullParser parser) throws IOException, XmlPullParserException {
-        parser.require(XmlPullParser.START_TAG, ns, "summary");
-
-        String rawText = readText(parser);
-        EntryValue<String> summary = new EntryValue<>(rawText);
-
-        parser.require(XmlPullParser.END_TAG, ns, "summary");
-        return summary;
     }
 
 
