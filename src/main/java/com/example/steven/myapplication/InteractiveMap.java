@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
-import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
@@ -23,6 +22,10 @@ import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,11 +37,19 @@ import java.util.List;
 // http://www.zoftino.com/google-maps-android-custom-info-window-example
 
 @SuppressWarnings("ALL")
-public class InteractiveMap extends FragmentActivity implements OnMapReadyCallback {
+public class InteractiveMap extends FragmentActivity implements OnMapReadyCallback, OpenDatabase {
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     GoogleMap mGoogleMap;
     List<Marker> buildingMarkerList = new ArrayList<>();
     List<Marker> plantMarkerList = new ArrayList<>();
+
+    @Override
+    public DatabaseSearch database() throws XmlPullParserException, IOException {
+        InputStream inputStream = getResources().openRawResource(R.xml.database);
+        XMLParser xmlParser = new XMLParser();
+        DatabaseSearch dataSearch = new DatabaseSearch(inputStream, xmlParser);
+        return dataSearch;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +91,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         }
 
         // create LatLngBounds for the CI campus
-        LatLngBounds CI = new LatLngBounds(new LatLng(34.159002, -119.048463 ),
+        LatLngBounds CI = new LatLngBounds(new LatLng(34.159002, -119.048463),
                 new LatLng(34.165051, -119.040445));
 
         CameraPosition cameraPosition = new CameraPosition.Builder().target(
@@ -103,7 +114,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
             @Override
             public void onCameraChange(CameraPosition cameraPosition) {
 
-                for (Marker m : buildingMarkerList ) {
+                for (Marker m : buildingMarkerList) {
                     m.setVisible(cameraPosition.zoom >= 16 && cameraPosition.zoom <= 19);
                 }
                 for (Marker m : plantMarkerList) {
@@ -116,7 +127,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
             public void onInfoWindowClick(Marker marker) {
-                if(marker.getTitle().equals("Lavatera maritima")) {
+                if (marker.getTitle().equals("Lavatera maritima")) {
                     Intent intent = new Intent(InteractiveMap.this, PlantSpecification.class);
                     startActivity(intent);
                 }
@@ -196,16 +207,34 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
             LatLng building = buildingList.get(buildingIndex);
             String buildingName = buildingNames[buildingIndex];
             Marker marker = googleMap.addMarker(
-                    new MarkerOptions().position(building).title(buildingName).icon(BitmapDescriptorFactory.fromResource(R.drawable.building_marker)));
+                    new MarkerOptions().position(building).title(buildingName).icon(
+                            BitmapDescriptorFactory.fromResource(R.drawable.building_marker)));
             buildingMarkerList.add(marker);
         }
 
-        // add plants to the marker list, temporary till I can pull from database
-        LatLng plantLocation = new LatLng(34.162637, -119.042980);
-        String plantString = "Lavatera maritima";
-        Marker marker = googleMap.addMarker(
-                new MarkerOptions().position(plantLocation).title(plantString).icon(BitmapDescriptorFactory.fromResource(R.drawable.flower_marker)));
-        plantMarkerList.add(marker);
+        // add plants to the marker list
+        DatabaseSearch database;
+        try {
+            database = database();
+            int plantID = 0;
+            Float[] location;
+            LatLng plantLocation;
+            String plantName;
+            for (int dataIndex = 0; dataIndex <= database.getFullDatabase().size(); dataIndex++)
+            {
+                plantID =  database.getFullDatabase().get(dataIndex).getPlantID().getObj();
+                location = database.getFullDatabase().get(dataIndex).gps.getObj();
+                plantLocation = new LatLng (location[0], location[1]);
+                plantName = database.getFullDatabase().get(dataIndex).speciesname.getObj();
+                Marker marker = googleMap.addMarker(new MarkerOptions().position(plantLocation).title(plantName).icon(BitmapDescriptorFactory.fromResource(R.drawable.flower_marker)));
+                marker.setTag(plantID);
+                plantMarkerList.add(marker);
+            }
+        } catch (XmlPullParserException error) {
+            error.printStackTrace();
+        } catch (IOException error) {
+            error.printStackTrace();
+        }
     }
 
     public boolean checkLocationPermission() {

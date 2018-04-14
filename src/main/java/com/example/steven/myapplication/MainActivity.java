@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_page);
         myDB = new DatabaseHelperClass(this);
+
     }
     
     public void interactiveMapButton(View view) {
