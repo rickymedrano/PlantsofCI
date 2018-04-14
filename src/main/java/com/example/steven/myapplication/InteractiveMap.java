@@ -134,6 +134,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
                     if(marker.getTag().equals(plantID))
                     {
                         Intent intent = new Intent(InteractiveMap.this, PlantSpecification.class);
+                        intent.putExtra("plantID", plantID);
                         startActivity(intent);
                     }
                 }
@@ -215,6 +216,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
             Marker marker = googleMap.addMarker(
                     new MarkerOptions().position(building).title(buildingName).icon(
                             BitmapDescriptorFactory.fromResource(R.drawable.building_marker)));
+            marker.setTag(buildingName);
             buildingMarkerList.add(marker);
         }
 
@@ -230,7 +232,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
                 plantID =  database.getFullDatabase().get(dataIndex).getPlantID().getObj();
                 location = database.getFullDatabase().get(dataIndex).getGPS().getObj();
                 plantLocation = new LatLng (location[0], location[1]);
-                plantName = database.getFullDatabase().get(dataIndex).getSpeciesName().getObj();
+                plantName = database.getFullDatabase().get(dataIndex).getCommonName().getObj();
                 Marker marker = googleMap.addMarker(new MarkerOptions().position(plantLocation).title(plantName).icon(BitmapDescriptorFactory.fromResource(R.drawable.flower_marker)));
                 marker.setTag(plantID);
                 plantMarkerList.add(marker);
