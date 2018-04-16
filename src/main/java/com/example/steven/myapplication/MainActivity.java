@@ -16,7 +16,10 @@ import com.google.android.gms.maps.SupportMapFragment;
 
 @SuppressWarnings("ALL")
 public class MainActivity extends AppCompatActivity {
+<<<<<<< HEAD
     DatabaseHelperClass myDB; //SQLite Database
+=======
+>>>>>>> master
     private static final int ERROR_DIALOG_REQUEST = 9001; // used when requesting certain dialogue boxes
 
     @Override
