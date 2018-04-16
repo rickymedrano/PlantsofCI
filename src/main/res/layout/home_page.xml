@@ -13,17 +13,17 @@
         android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="228dp"
         android:background="@color/opaquewhite"
         android:ems="10"
         android:fontFamily="@font/roboto_mono_light"
         android:text="@string/plants_of_ci"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
+        android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -35,7 +35,6 @@
         android:text="@string/interactive_map"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Title"/>
 
@@ -47,7 +46,7 @@
         android:text="@string/plant_search"
         app:layout_constraintBottom_toTopOf="@+id/About"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2"/>
 
@@ -77,18 +76,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_end="547dp"/>
 
-    <ImageView
-        android:id="@+id/dolphin"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_marginBottom="52dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@string/dolphin"
-        app:layout_constraintBottom_toTopOf="@+id/Title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ekho_main"/>
+
 
 </android.support.constraint.ConstraintLayout>

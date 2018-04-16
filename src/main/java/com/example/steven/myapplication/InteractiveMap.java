@@ -1,6 +1,7 @@
 package com.example.steven.myapplication;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -21,6 +22,10 @@ import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,11 +34,23 @@ import java.util.List;
  * Created by Tyler on 3/5/2018.
  */
 
+// http://www.zoftino.com/google-maps-android-custom-info-window-example
+
 @SuppressWarnings("ALL")
-public class InteractiveMap extends FragmentActivity implements OnMapReadyCallback {
+public class InteractiveMap extends FragmentActivity implements OnMapReadyCallback, OpenDatabase {
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     GoogleMap mGoogleMap;
-    List<Marker> mMarkerList = new ArrayList<>();
+    List<Marker> buildingMarkerList = new ArrayList<>();
+    List<Marker> plantMarkerList = new ArrayList<>();
+    DatabaseSearch database;
+
+    @Override
+    public DatabaseSearch database() throws XmlPullParserException, IOException {
+        InputStream inputStream = getResources().openRawResource(R.raw.database);
+        XMLParser xmlParser = new XMLParser();
+        DatabaseSearch dataSearch = new DatabaseSearch(inputStream, xmlParser);
+        return dataSearch;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +92,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         }
 
         // create LatLngBounds for the CI campus
-        LatLngBounds CI = new LatLngBounds(new LatLng(34.159002, -119.048463 ),
+        LatLngBounds CI = new LatLngBounds(new LatLng(34.159002, -119.048463),
                 new LatLng(34.165051, -119.040445));
 
         CameraPosition cameraPosition = new CameraPosition.Builder().target(
@@ -97,8 +114,29 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         googleMap.setOnCameraChangeListener(new OnCameraChangeListener() {
             @Override
             public void onCameraChange(CameraPosition cameraPosition) {
-                for (Marker m : mMarkerList) {
+
+                for (Marker m : buildingMarkerList) {
                     m.setVisible(cameraPosition.zoom >= 16 && cameraPosition.zoom <= 19);
+                }
+                for (Marker m : plantMarkerList) {
+                    m.setVisible(cameraPosition.zoom >= 19);
+                }
+            }
+        });
+
+
+        googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+            @Override
+            public void onInfoWindowClick(Marker marker) {
+                for(int plantIDIndex = 0; plantIDIndex < database.getFullDatabase().size(); plantIDIndex++ )
+                {
+                    int plantID = database.getFullDatabase().get(plantIDIndex).getPlantID().getObj();
+                    if(marker.getTag().equals(plantID))
+                    {
+                        Intent intent = new Intent(InteractiveMap.this, PlantSpecification.class);
+                        intent.putExtra("plantID", plantID);
+                        startActivity(intent);
+                    }
                 }
             }
         });
@@ -176,8 +214,33 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
             LatLng building = buildingList.get(buildingIndex);
             String buildingName = buildingNames[buildingIndex];
             Marker marker = googleMap.addMarker(
-                    new MarkerOptions().position(building).title(buildingName).icon(BitmapDescriptorFactory.fromResource(R.drawable.building_marker)));
-            mMarkerList.add(marker);
+                    new MarkerOptions().position(building).title(buildingName).icon(
+                            BitmapDescriptorFactory.fromResource(R.drawable.building_marker)));
+            marker.setTag(buildingName);
+            buildingMarkerList.add(marker);
+        }
+
+        // add plants to the marker list
+        try {
+            database = database();
+            int plantID = 0;
+            Float[] location;
+            LatLng plantLocation;
+            String plantName;
+            for (int dataIndex = 0; dataIndex < database.getFullDatabase().size(); dataIndex++)
+            {
+                plantID =  database.getFullDatabase().get(dataIndex).getPlantID().getObj();
+                location = database.getFullDatabase().get(dataIndex).getGPS().getObj();
+                plantLocation = new LatLng (location[0], location[1]);
+                plantName = database.getFullDatabase().get(dataIndex).getCommonName().getObj();
+                Marker marker = googleMap.addMarker(new MarkerOptions().position(plantLocation).title(plantName).icon(BitmapDescriptorFactory.fromResource(R.drawable.flower_marker)));
+                marker.setTag(plantID);
+                plantMarkerList.add(marker);
+            }
+        } catch (XmlPullParserException error) {
+            error.printStackTrace();
+        } catch (IOException error) {
+            error.printStackTrace();
         }
     }
 
