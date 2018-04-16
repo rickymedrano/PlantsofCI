@@ -1,40 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-=======
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
->>>>>>> master
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.steven.myapplication.PlantSpecification">
+    tools:context="com.example.steven.plantsofci.PlantSpecification">
 
     <TextView
-<<<<<<< HEAD
         android:id="@+id/drought"
         android:layout_width="230dp"
         android:layout_height="30dp"
         android:layout_above="@+id/textView3"
         android:layout_marginBottom="8dp"
-=======
-        android:id="@+id/editText7"
-        android:layout_width="225dp"
-        android:layout_height="38dp"
-        android:layout_above="@+id/textView3"
->>>>>>> master
         android:layout_toEndOf="@+id/guideline"
         android:layout_toRightOf="@+id/guideline"
         android:ems="10"
         android:inputType="textPersonName"
         android:singleLine="false"
-<<<<<<< HEAD
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Drought Tolerance:"
+        app:layout_constraintStart_toEndOf="@+id/DroughtTolerance"
         app:layout_constraintTop_toBottomOf="@+id/bloomseason"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="UnknownId" />
@@ -56,51 +43,26 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:layout_constraintVertical_bias="0.272" />
+        app:layout_constraintVertical_bias="0.272"
+        tools:ignore="UnknownId" />
 
     <TextView
         android:id="@+id/flowername"
         android:layout_width="230dp"
         android:layout_height="30dp"
-=======
-        android:text="Drought Tolerant: Yes"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        app:layout_constraintStart_toStartOf="@+id/editText6"
-        app:layout_constraintTop_toBottomOf="@+id/editText6"/>
-
-    <TextView
-        android:id="@+id/editText6"
-        android:layout_width="225dp"
-        android:layout_height="38dp"
-        android:layout_above="@+id/editText3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:singleLine="false"
-        android:text="Plant Size: 23-82ft"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        app:layout_constraintStart_toStartOf="@+id/editText5"
-        app:layout_constraintTop_toBottomOf="@+id/editText5"/>
-
-    <TextView
-        android:id="@+id/editText5"
-        android:layout_width="225dp"
-        android:layout_height="38dp"
->>>>>>> master
         android:layout_below="@+id/editText3"
         android:layout_toEndOf="@+id/guideline"
         android:layout_toRightOf="@+id/guideline"
         android:ems="10"
         android:inputType="textPersonName"
         android:singleLine="false"
-<<<<<<< HEAD
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Flower Color:"
-        app:layout_constraintTop_toBottomOf="@+id/location" />
+        app:layout_constraintStart_toEndOf="@+id/FlowerColor"
+        app:layout_constraintTop_toBottomOf="@+id/location"
+        tools:ignore="UnknownId" />
 
     <TextView
         android:id="@+id/speciesname"
@@ -117,50 +79,26 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Species name:"
+        app:layout_constraintStart_toEndOf="@+id/Speciesname"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        android:layout_marginRight="8dp" />
+        android:layout_marginRight="8dp"
+        tools:ignore="UnknownId" />
 
     <TextView
         android:id="@+id/origin"
         android:layout_width="230dp"
         android:layout_height="30dp"
-=======
-        android:text="Flower Color: Orange"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        app:layout_constraintStart_toStartOf="@+id/editText3"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"/>
-
-    <TextView
-        android:id="@+id/editText4"
-        android:layout_width="225dp"
-        android:layout_height="38dp"
-        android:layout_below="@+id/editText"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:singleLine="false"
-        android:text="Species Name: Spathodea campanulata"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <TextView
-        android:id="@+id/editText3"
-        android:layout_width="225dp"
-        android:layout_height="38dp"
->>>>>>> master
         android:layout_above="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:ems="10"
         android:inputType="textPersonName"
         android:singleLine="false"
-<<<<<<< HEAD
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Origin:"
+        app:layout_constraintStart_toEndOf="@+id/Origin"
         app:layout_constraintTop_toBottomOf="@+id/flowername" />
 
     <ImageView
@@ -174,62 +112,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/guideline"
-=======
-        android:text="Origin: Africa"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        app:layout_constraintStart_toStartOf="@+id/editText4"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"/>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="201dp"
-        android:layout_height="223dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/editText"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editText4"
->>>>>>> master
-        app:layout_constraintTop_toBottomOf="@+id/plantTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/plantTitle"
+        tools:ignore="UnknownId" />
 
 
     <TextView
-<<<<<<< HEAD
         android:id="@+id/location"
         android:layout_width="230dp"
         android:layout_height="30dp"
-=======
-        android:id="@+id/textView"
-        android:layout_width="175dp"
-        android:layout_height="23dp"
->>>>>>> master
         android:layout_alignEnd="@+id/imageView2"
         android:layout_alignRight="@+id/imageView2"
         android:layout_below="@+id/imageView2"
         android:layout_marginEnd="8dp"
-<<<<<<< HEAD
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Location:"
+        app:layout_constraintStart_toEndOf="@+id/Location"
         app:layout_constraintTop_toBottomOf="@+id/speciesname"
         android:layout_marginRight="8dp" />
-=======
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Lot A4"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"/>
->>>>>>> master
 
     <TextView
         android:id="@+id/plantTitle"
@@ -238,7 +139,6 @@
         android:layout_alignEnd="@+id/textView3"
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/textView3"
-<<<<<<< HEAD
         android:layout_marginTop="8dp"
         android:text="default"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -246,83 +146,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="UnknownId" />
-=======
-        android:text="default"
-        android:layout_marginTop="8dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/editText"
-        android:layout_width="225dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:singleLine="false"
-        android:text="Common Name: African Tulip Tree"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/plantTitle"
-        android:layout_marginLeft="8dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="391dp"
-        android:layout_height="199dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="64dp"
-        android:text="African Tulip Tree located in Lot A4. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"/>
->>>>>>> master
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-<<<<<<< HEAD
         app:layout_constraintGuide_begin="0dp" />
-=======
-        app:layout_constraintGuide_begin="20dp"/>
->>>>>>> master
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-<<<<<<< HEAD
         app:layout_constraintGuide_begin="20dp" />
-=======
-        app:layout_constraintGuide_begin="20dp"/>
->>>>>>> master
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-<<<<<<< HEAD
         app:layout_constraintGuide_begin="20dp" />
-=======
-        app:layout_constraintGuide_begin="20dp"/>
->>>>>>> master
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-<<<<<<< HEAD
         app:layout_constraintGuide_begin="20dp" />
 
     <TextView
@@ -335,7 +185,7 @@
         app:layout_constraintBottom_toTopOf="@+id/drought"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Bloomseason:"
+        app:layout_constraintStart_toEndOf="@+id/Bloomseason"
         app:layout_constraintTop_toBottomOf="@+id/origin"
         android:layout_marginRight="8dp" />
 
@@ -354,7 +204,7 @@
         app:layout_constraintVertical_bias="0.272" />
 
     <TextView
-        android:id="@+id/Species name:"
+        android:id="@+id/Species_name"
         android:layout_width="135dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
@@ -367,51 +217,51 @@
         android:layout_marginLeft="8dp" />
 
     <TextView
-        android:id="@+id/Location:"
+        android:id="@+id/Location"
         android:layout_width="135dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
         android:text="@string/location"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Species name:"
+        app:layout_constraintTop_toBottomOf="@+id/Species_name"
         android:layout_marginLeft="8dp" />
 
     <TextView
-        android:id="@+id/Flower Color:"
+        android:id="@+id/Flower_Color"
         android:layout_width="135dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
         android:text="@string/flower_color"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Location:"
+        app:layout_constraintTop_toBottomOf="@+id/Location"
         android:layout_marginLeft="8dp" />
 
     <TextView
-        android:id="@+id/Origin:"
+        android:id="@+id/Origin"
         android:layout_width="135dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
         android:text="@string/origin"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Flower Color:"
+        app:layout_constraintTop_toBottomOf="@+id/Flower_Color"
         android:layout_marginLeft="8dp" />
 
     <TextView
-        android:id="@+id/Bloomseason:"
+        android:id="@+id/Bloomseason"
         android:layout_width="135dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
         android:text="@string/bloomseason"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Origin:"
+        app:layout_constraintTop_toBottomOf="@+id/Origin"
         android:layout_marginLeft="8dp" />
 
     <TextView
-        android:id="@+id/Drought Tolerance:"
+        android:id="@+id/edittext6"
         android:layout_width="135dp"
         android:layout_height="30dp"
         android:layout_marginBottom="8dp"
@@ -420,7 +270,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Bloomseason:"
+        app:layout_constraintTop_toBottomOf="@+id/Bloomseason"
         app:layout_constraintVertical_bias="0.0"
         android:layout_marginLeft="8dp" />
 
@@ -454,8 +304,5 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp" />
-=======
-        app:layout_constraintGuide_begin="20dp"/>
->>>>>>> master
 
 </android.support.constraint.ConstraintLayout>
