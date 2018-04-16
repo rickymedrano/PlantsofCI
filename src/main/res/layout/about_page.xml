@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutPage"
+    tools:context="com.example.steven.plantsofci.AboutPage"
     tools:layout_editor_absoluteY="25dp"
     android:background="@color/light_cream">
 
@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="About Page"
+        android:text="About Plants of CI"
         android:textAlignment="center"
         android:textSize="30sp"
         android:textColor="@color/colorBlack"
@@ -25,8 +25,8 @@
         app:layout_constraintTop_toTopOf="parent"/>
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="349dp"
-        android:layout_height="298dp"
+        android:layout_width="324dp"
+        android:layout_height="260dp"
         android:layout_marginTop="16dp"
         android:adjustViewBounds="true"
         android:src="@drawable/ekho_main"
@@ -40,6 +40,7 @@
         android:layout_width="310dp"
         android:layout_height="233dp"
         android:layout_marginBottom="8dp"
+        android:textSize="27sp"
         android:layout_marginTop="8dp"
         android:text="@string/aboutPage"
         android:textAlignment="textStart"
