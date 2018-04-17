@@ -20,7 +20,6 @@ import java.util.List;
  */
 
 public class PlantSearch extends Activity implements OpenDatabase {
-    List<PlantItem> plantItemList = new ArrayList<>();
     DatabaseSearch database;
 
     @Override
@@ -37,37 +36,22 @@ public class PlantSearch extends Activity implements OpenDatabase {
 
         //Get plant name and id from xml database
         try {
+            List<XMLParser.Entry> sampledatabase = new ArrayList<>();
             database = database();
-            String photoID;
-            int photoIndex = 1;
-            for (int dataIndex = 0; dataIndex < database.getFullDatabase().size(); dataIndex++)
-            //Add PlantItem objects to Arraylist to be used by RecyclerView
-            {
-                photoID = String.valueOf(photoIndex) + "-1.png";
-                photoIndex++;
-                plantItemList.add(new PlantItem(database.getFullDatabase().get(dataIndex).getPlantID().getObj(),
-                        database.getFullDatabase().get(dataIndex).getCommonName().getObj(), photoID));
-            }
+            sampledatabase = database.getFullDatabase();
+            DataItemAdapter adapter = new DataItemAdapter(this, sampledatabase);
+            RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rvItems);
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            DividerItemDecoration itemDecor = new DividerItemDecoration(this, 1);
+            recyclerView.addItemDecoration(itemDecor);
+            recyclerView.setAdapter(adapter);
+
         } catch (XmlPullParserException error) {
             error.printStackTrace();
         } catch (IOException error) {
             error.printStackTrace();
         }
         //Sort ArrayList in alphabetical order by Common Name
-        Collections.sort(plantItemList, new Comparator<PlantItem>() {
-            @Override
-            public int compare(PlantItem o1, PlantItem o2) {
-                return o1.getItemName().compareTo(o2.getItemName());
-            }
-        });
-
-        DataItemAdapter adapter = new DataItemAdapter(this, plantItemList);
-
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rvItems);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        DividerItemDecoration itemDecor = new DividerItemDecoration(this, 1);
-        recyclerView.addItemDecoration(itemDecor);
-        recyclerView.setAdapter(adapter);
     }
 }
 

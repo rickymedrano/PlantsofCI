@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
@@ -21,10 +23,10 @@ import java.util.ArrayList;
 
 public class DataItemAdapter extends RecyclerView.Adapter<DataItemAdapter.ViewHolder> {
 
-    private List<PlantItem> plantItems;
+    private List<XMLParser.Entry> plantItems;
     Context mContext;
 
-    public DataItemAdapter(Context context, List<PlantItem> items) {
+    public DataItemAdapter(Context context, List<XMLParser.Entry> items) {
         this.plantItems = items;
         mContext = context;
     }
@@ -37,27 +39,19 @@ public class DataItemAdapter extends RecyclerView.Adapter<DataItemAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(DataItemAdapter.ViewHolder holder, int position) {
-        final PlantItem item = plantItems.get(position);
+        //get current Entry
+        final XMLParser.Entry item = plantItems.get(position);
 
-        //attempt to set icon image from resource assets
-        //assumes item.getPhotoID is valid
-        try {
-            String imageFile = item.getPhotoID();
-            InputStream inputStream = mContext.getAssets().open(imageFile);
-            Drawable d = Drawable.createFromStream(inputStream, null);
-            holder.imageView.setImageDrawable(d);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        holder.tvName.setText(item.getItemName());
-        //holder.tvName.setText(database.getFullDatabase().get(position).getCommonName().getObj());
-        //String imageFile = item.getImage();
+        //Set name and icon
+        holder.tvName.setText(item.getCommonName().getObj());
+        Picasso.get().load("file:///android_asset/PlantIcons/" + Integer.toString(position+1) + "-1.png").placeholder(R.drawable.cast_album_art_placeholder).into(holder.imageView);
         //holder.imageView.setImageResource(R.drawable.african_tulip_tree_icon);
 
+        //Go to prospective plant page based on plantID
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int itemID = item.getItemId();
+                int itemID = item.getPlantID().getObj();
                 Intent intent = new Intent(mContext, PlantSpecification.class);
                 intent.putExtra("plantID", itemID);
                 mContext.startActivity(intent);

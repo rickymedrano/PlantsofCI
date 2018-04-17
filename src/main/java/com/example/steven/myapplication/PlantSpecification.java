@@ -42,6 +42,7 @@ public class PlantSpecification extends AppCompatActivity implements OpenDatabas
         TextView plantTitle = (TextView)findViewById(R.id.plantTitle);
         plantTitle.setText(plantName);
         ImageView imageView = (ImageView)findViewById(R.id.imageView2);
-        Picasso.get().load("https://docs.google.com/uc?id=1_NroIB9reMuUEJyxPVDN7ZjR4qG5DALO").into(imageView);
+        Picasso.get().load("file:///android_asset/PlantPictures/" + Integer.toString(plantID+1) + "-1.png").placeholder(R.drawable.cast_album_art_placeholder).into(imageView);
+        //Picasso.get().load(R.drawable.brittlebush).into(imageView);
     }
 }
