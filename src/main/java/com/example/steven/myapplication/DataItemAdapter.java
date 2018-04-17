@@ -44,7 +44,7 @@ public class DataItemAdapter extends RecyclerView.Adapter<DataItemAdapter.ViewHo
 
         //Set name and icon
         holder.tvName.setText(item.getCommonName().getObj());
-        Picasso.get().load("file:///android_asset/PlantIcons/" + Integer.toString(position+1) + "-1.png").placeholder(R.drawable.cast_album_art_placeholder).into(holder.imageView);
+        Picasso.get().load("file:///android_asset/PlantIcons/" + Integer.toString(position+1) + "_2_1.png").placeholder(R.drawable.cast_album_art_placeholder).into(holder.imageView);
         //holder.imageView.setImageResource(R.drawable.african_tulip_tree_icon);
 
         //Go to prospective plant page based on plantID
