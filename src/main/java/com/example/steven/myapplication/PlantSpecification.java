@@ -38,11 +38,43 @@ public class PlantSpecification extends AppCompatActivity implements OpenDatabas
         }
 
         setContentView(R.layout.plant_specification);
-        String plantName = database.getFullDatabase().get(plantID).getCommonName().getObj();
-        TextView plantTitle = (TextView)findViewById(R.id.plantTitle);
-        plantTitle.setText(plantName);
+
+        //Set Common Name
+        TextView plantTitle = findViewById(R.id.plantTitle);
+        plantTitle.setText(database.getFullDatabase().get(plantID).getCommonName().getObj());
+        //Set Species Name
+        TextView plantSpecies = findViewById(R.id.speciesname);
+        plantSpecies.setText(database.getFullDatabase().get(plantID).getSpeciesName().getObj());
+        //Set Location
+        TextView plantLocation = findViewById(R.id.location);
+        String[] location = database.getFullDatabase().get(plantID).getLocation().getObj();
+        StringBuilder stringLocation = new StringBuilder();
+        for (int i = 0; i < location.length; i++)
+        {
+            stringLocation.append(location[i]);
+        }
+        plantLocation.setText(stringLocation);
+        //Set Flower Color
+        TextView plantFlowerColor = findViewById(R.id.flowername);
+        plantFlowerColor.setText(database.getFullDatabase().get(plantID).getFlowerColor().getObj());
+        //Set Origin
+        TextView plantOrigin = findViewById(R.id.origin);
+        plantOrigin.setText(database.getFullDatabase().get(plantID).getOrigin().getObj());
+        //Set Bloom Season
+        TextView plantBloomSeason = findViewById(R.id.bloomseason);
+        plantBloomSeason.setText(database.getFullDatabase().get(plantID).getBloomSeason().getObj());
+        //Set Drought Tolerance
+        TextView plantDroughtTolerance = findViewById(R.id.drought);
+        plantDroughtTolerance.setText(database.getFullDatabase().get(plantID).getDrought().getObj());
+//        //Set Height
+        TextView plantHeight = findViewById(R.id.plantheight);
+        plantHeight.setText(database.getFullDatabase().get(plantID).getPlantWidth().getObj());
+        //Set Width
+        TextView plantWidth = findViewById(R.id.textView4);
+        plantWidth.setText(database.getFullDatabase().get(plantID).getPlantWidth().getObj());
+        //Set Image
         ImageView imageView = (ImageView)findViewById(R.id.imageView2);
         Picasso.get().load("file:///android_asset/PlantPictures/" + Integer.toString(plantID+1) + "-1.png").placeholder(R.drawable.cast_album_art_placeholder).into(imageView);
-        //Picasso.get().load(R.drawable.brittlebush).into(imageView);
+
     }
 }
