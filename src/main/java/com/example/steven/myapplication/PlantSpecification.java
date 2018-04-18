@@ -68,7 +68,7 @@ public class PlantSpecification extends AppCompatActivity implements OpenDatabas
         plantDroughtTolerance.setText(database.getFullDatabase().get(plantID).getDrought().getObj());
 //        //Set Height
         TextView plantHeight = findViewById(R.id.plantheight);
-        plantHeight.setText(database.getFullDatabase().get(plantID).getPlantWidth().getObj());
+        plantHeight.setText(database.getFullDatabase().get(plantID).getPlantHeight().getObj());
         //Set Width
         TextView plantWidth = findViewById(R.id.textView4);
         plantWidth.setText(database.getFullDatabase().get(plantID).getPlantWidth().getObj());

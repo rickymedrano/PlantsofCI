@@ -141,7 +141,7 @@ public class XMLParser {
                     width = readWidth(parser);
                     break;
                 case "height":
-                    width = readHeight(parser);
+                    height = readHeight(parser);
                     break;
                 case "drought":
                     drought = readDrought(parser);
