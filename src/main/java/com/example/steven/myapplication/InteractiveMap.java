@@ -93,7 +93,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
 
         // create LatLngBounds for the CI campus
         LatLngBounds CI = new LatLngBounds(new LatLng(34.159002, -119.048463),
-                new LatLng(34.165051, -119.040445));
+                new LatLng(34.171489, -119.040296));
 
         CameraPosition cameraPosition = new CameraPosition.Builder().target(
                 new LatLng(34.162081, -119.043616)).zoom(16).build();
