@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
+
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.GoogleMap;
@@ -16,15 +17,12 @@ import com.google.android.gms.maps.SupportMapFragment;
 
 @SuppressWarnings("ALL")
 public class MainActivity extends AppCompatActivity {
-    DatabaseHelperClass myDB; //SQLite Database
     private static final int ERROR_DIALOG_REQUEST = 9001; // used when requesting certain dialogue boxes
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_page);
-        myDB = new DatabaseHelperClass(this);
-
     }
     
     public void interactiveMapButton(View view) {

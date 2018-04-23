@@ -19,5 +19,12 @@
     <string name="aboutPage">Created by Ricky Medrano, Tyler Allen, Steven
         Romp, and Travis Wight for Comp 350. \nArt is done by Sierra Lillian (SierraLillianArt).
     </string>
-
+    <string name="species_name">Species name:</string>
+    <string name="location">Location</string>
+    <string name="flower_color">Flower Color:</string>
+    <string name="width">Width</string>
+    <string name="height">Height</string>
+    <string name="drought_tolerance">Drought Tolerance:</string>
+    <string name="bloomseason">Bloomseason:</string>
+    <string name="origin">Origin:</string>
 </resources>

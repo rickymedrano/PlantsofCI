@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.widget.Toast;
 
+
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnCameraChangeListener;
 import com.google.android.gms.maps.MapFragment;
@@ -42,10 +43,11 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
     GoogleMap mGoogleMap;
     List<Marker> buildingMarkerList = new ArrayList<>();
     List<Marker> plantMarkerList = new ArrayList<>();
+    DatabaseSearch database;
 
     @Override
     public DatabaseSearch database() throws XmlPullParserException, IOException {
-        InputStream inputStream = getResources().openRawResource(R.xml.database);
+        InputStream inputStream = getResources().openRawResource(R.raw.database);
         XMLParser xmlParser = new XMLParser();
         DatabaseSearch dataSearch = new DatabaseSearch(inputStream, xmlParser);
         return dataSearch;
@@ -92,7 +94,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
 
         // create LatLngBounds for the CI campus
         LatLngBounds CI = new LatLngBounds(new LatLng(34.159002, -119.048463),
-                new LatLng(34.165051, -119.040445));
+                new LatLng(34.171489, -119.040296));
 
         CameraPosition cameraPosition = new CameraPosition.Builder().target(
                 new LatLng(34.162081, -119.043616)).zoom(16).build();
@@ -108,6 +110,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         googleMap.getUiSettings().setZoomControlsEnabled(false);
         googleMap.getUiSettings().setMyLocationButtonEnabled(false);
         googleMap.getUiSettings().setMapToolbarEnabled(false);
+
 
         // set markers, plants, buildings, etc.
         googleMap.setOnCameraChangeListener(new OnCameraChangeListener() {
@@ -127,9 +130,15 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
             public void onInfoWindowClick(Marker marker) {
-                if (marker.getTitle().equals("Lavatera maritima")) {
-                    Intent intent = new Intent(InteractiveMap.this, PlantSpecification.class);
-                    startActivity(intent);
+                for(int plantIDIndex = 0; plantIDIndex < database.getFullDatabase().size(); plantIDIndex++ )
+                {
+                    int plantID = database.getFullDatabase().get(plantIDIndex).getPlantID().getObj();
+                    if(marker.getTag().equals(plantID))
+                    {
+                        Intent intent = new Intent(InteractiveMap.this, PlantSpecification.class);
+                        intent.putExtra("plantID", plantID);
+                        startActivity(intent);
+                    }
                 }
             }
         });
@@ -209,23 +218,23 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
             Marker marker = googleMap.addMarker(
                     new MarkerOptions().position(building).title(buildingName).icon(
                             BitmapDescriptorFactory.fromResource(R.drawable.building_marker)));
+            marker.setTag(buildingName);
             buildingMarkerList.add(marker);
         }
 
         // add plants to the marker list
-        DatabaseSearch database;
         try {
             database = database();
             int plantID = 0;
             Float[] location;
             LatLng plantLocation;
             String plantName;
-            for (int dataIndex = 0; dataIndex <= database.getFullDatabase().size(); dataIndex++)
+            for (int dataIndex = 0; dataIndex < database.getFullDatabase().size(); dataIndex++)
             {
                 plantID =  database.getFullDatabase().get(dataIndex).getPlantID().getObj();
-                location = database.getFullDatabase().get(dataIndex).gps.getObj();
+                location = database.getFullDatabase().get(dataIndex).getGPS().getObj();
                 plantLocation = new LatLng (location[0], location[1]);
-                plantName = database.getFullDatabase().get(dataIndex).speciesname.getObj();
+                plantName = database.getFullDatabase().get(dataIndex).getCommonName().getObj();
                 Marker marker = googleMap.addMarker(new MarkerOptions().position(plantLocation).title(plantName).icon(BitmapDescriptorFactory.fromResource(R.drawable.flower_marker)));
                 marker.setTag(plantID);
                 plantMarkerList.add(marker);
@@ -268,18 +277,11 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         switch (requestCode) {
             case MY_PERMISSIONS_REQUEST_LOCATION: {
                 // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                    // permission was granted, yay!
-                    if (ActivityCompat.checkSelfPermission(this,
-                            Manifest.permission.ACCESS_FINE_LOCATION)
-                            == PackageManager.PERMISSION_GRANTED) {
-                        mGoogleMap.setMyLocationEnabled(true);
-                    }
-                } else {
+                if (grantResults.length <= 0
+                        || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
                     // permission denied,Disable the functionality that depends on this permission.
                     Toast.makeText(this, "permission denied", Toast.LENGTH_LONG).show();
+
                 }
             }
         }

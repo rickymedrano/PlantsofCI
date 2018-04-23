@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity">
+            android:name="com.example.steven.myapplication.MainActivity">
             <intent-filter>
 
                 <action android:name="android.intent.action.MAIN"/>
@@ -32,13 +32,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".InteractiveMap"
+            android:name="com.example.steven.myapplication.InteractiveMap"
             android:label="@string/interactive_map"/>
         <activity
-            android:name=".PlantSearch"
+            android:name="com.example.steven.myapplication.PlantSearch"
             android:label="@string/plant_search"/>
         <activity
-            android:name=".PlantSpecification"
+            android:name="com.example.steven.myapplication.PlantSpecification"
             android:label="plant_specification"/>
 
 
@@ -50,7 +50,7 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts"/>
 
-        <activity android:name=".AboutPage">
+        <activity android:name="com.example.steven.myapplication.AboutPage">
         </activity>
 
         <meta-data
