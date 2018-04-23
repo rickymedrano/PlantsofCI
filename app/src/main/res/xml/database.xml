@@ -1,0 +1,1347 @@
+<?xml version="1.0" ?>
+<plantdata>
+	<entry>
+		<plantid>0</plantid>
+		<commonname>Blue Elderberry</commonname>
+		<speciesname>Sambucus nigra ssp. caerulea</speciesname>
+		<origin>California</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>20-30ft</height>
+		<width>20-30ft</width>
+		<drought>Yes</drought>
+		<location>Lot A3</location>
+		<gps>34.166049, -119.046833</gps>
+		<pictureid>1-1,1-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>1</plantid>
+		<commonname>Snow Flurry Ceanothus</commonname>
+		<speciesname>Ceanothus thyrsiflorus 'Snow Flurry'</speciesname>
+		<origin>California</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Winter, Spring</bloomseason>
+		<height>8-10ft</height>
+		<width>8-12ft</width>
+		<drought>Yes</drought>
+		<location>Lot A3</location>
+		<gps>34.165882, -119.046853</gps>
+		<pictureid>2-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>2</plantid>
+		<commonname>Santa Cruz Island Ironwood</commonname>
+		<speciesname>Lyonothamnus floribundus ssp aspleniifolius</speciesname>
+		<origin>California</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Summer</bloomseason>
+		<height>20-30ft</height>
+		<width>15-20ft</width>
+		<drought>Yes</drought>
+		<location>Lot A3</location>
+		<gps>34.166174, -119.045698</gps>
+		<pictureid>3-1,3-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>3</plantid>
+		<commonname>Western Redbud</commonname>
+		<speciesname>Cercis occidentalis</speciesname>
+		<origin>California</origin>
+		<flowercolor>Magenta</flowercolor>
+		<bloomseason>Spring</bloomseason>
+		<height>12-20ft</height>
+		<width>10-15ft</width>
+		<drought>Yes</drought>
+		<location>University Drive</location>
+		<gps>34.166181, -119.045448</gps>
+		<pictureid>4-1,4-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>4</plantid>
+		<commonname>White Sage</commonname>
+		<speciesname>Salvia apiana</speciesname>
+		<origin>California</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>4-5ft</height>
+		<width>4-5ft</width>
+		<drought>Yes</drought>
+		<location>University Drive</location>
+		<gps>34.165839, -119.045323</gps>
+		<pictureid>5-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>5</plantid>
+		<commonname>Fern Leaf Yarrow</commonname>
+		<speciesname>Achillea 'Moonshine'</speciesname>
+		<origin>California</origin>
+		<flowercolor>Yellow</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>1-2ft</height>
+		<width>2-3ft</width>
+		<drought>Yes</drought>
+		<location>University Drive</location>
+		<gps>34,166026, -119.045387</gps>
+		<pictureid>6-1,6-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>6</plantid>
+		<commonname>Little John Dwarf Bottlebrush</commonname>
+		<speciesname>Callistemon 'Little John'</speciesname>
+		<origin>Australia</origin>
+		<flowercolor>Red</flowercolor>
+		<bloomseason>Spring, Summer, Fall</bloomseason>
+		<height>3ft</height>
+		<width>5ft</width>
+		<drought>Yes</drought>
+		<location>Santa Barbara St</location>
+		<gps>34.165047, -119.045037</gps>
+		<pictureid>7-1,7-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>7</plantid>
+		<commonname>Hummingbird Sage</commonname>
+		<speciesname>Salvia spathacea</speciesname>
+		<origin>California</origin>
+		<flowercolor>Pink</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>1-2ft</height>
+		<width>4-5ft</width>
+		<drought>Yes</drought>
+		<location>Santa Barbara St</location>
+		<gps>34.164985, -119.045269</gps>
+		<pictureid>8-1,8-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>8</plantid>
+		<commonname>Seaside Daisy</commonname>
+		<speciesname>Erigeron glaucus</speciesname>
+		<origin>California</origin>
+		<flowercolor>Lavendar</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>&lt;1ft</height>
+		<width>1-3ft</width>
+		<drought>Yes</drought>
+		<location>Santa Barbara St</location>
+		<gps>34.164856, -119.045848</gps>
+		<pictureid>9-1,9-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>9</plantid>
+		<commonname>Coral Aloe</commonname>
+		<speciesname>Aloe striata</speciesname>
+		<origin>South Africa</origin>
+		<flowercolor>Red</flowercolor>
+		<bloomseason>Winter, Spring</bloomseason>
+		<height>2-3ft</height>
+		<width>1-2ft</width>
+		<drought>Yes</drought>
+		<location>Modoc Hall</location>
+		<gps>34.163887, -119.048172</gps>
+		<pictureid>10-1,10-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>10</plantid>
+		<commonname>Carribean Agave</commonname>
+		<speciesname>Agave angustifolia 'Marginata'</speciesname>
+		<origin>Mexico</origin>
+		<flowercolor>White &amp; Green</flowercolor>
+		<bloomseason>Winter,Spring</bloomseason>
+		<height>3-4ft</height>
+		<width>3-4ft</width>
+		<drought>Yes</drought>
+		<location>Modoc Hall</location>
+		<gps>34.163803, -119.048138</gps>
+		<pictureid>11-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>11</plantid>
+		<commonname>Lipstick Echeveria</commonname>
+		<speciesname>Echeveria agavoides 'Lipstick'</speciesname>
+		<origin>Mexico</origin>
+		<flowercolor>Red &amp; Yellow</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>&lt;1ft</height>
+		<width>1ft</width>
+		<drought>Yes</drought>
+		<location>Modoc Hall</location>
+		<gps>34.163924, -119.048138</gps>
+		<pictureid>12-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>12</plantid>
+		<commonname>Dwarf Red Fountain Grass</commonname>
+		<speciesname>Pennisetum 'Eaton Canyon'</speciesname>
+		<origin>Africa</origin>
+		<flowercolor>Burgundy</flowercolor>
+		<bloomseason>Summer</bloomseason>
+		<height>1-3ft</height>
+		<width>1-2ft</width>
+		<drought>Yes</drought>
+		<location>Lot A4</location>
+		<gps>34.163970, -119.046566</gps>
+		<pictureid>13-1,13-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>13</plantid>
+		<commonname>Bougainvillea</commonname>
+		<speciesname>Bougainvillea sp.</speciesname>
+		<origin>Brazil</origin>
+		<flowercolor>Pink</flowercolor>
+		<bloomseason>Spring, Summer, Fall</bloomseason>
+		<height>Climbing Vine</height>
+		<width>Sprawling Vine</width>
+		<drought>Yes</drought>
+		<location>Lot A4</location>
+		<gps>34.164441, -119.046676</gps>
+		<pictureid>14-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>14</plantid>
+		<commonname>Cedros Island Verbena</commonname>
+		<speciesname>Verbena lilacina 'De la Mina'</speciesname>
+		<origin>California</origin>
+		<flowercolor>Light Purple</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>3-4ft</height>
+		<width>3-4ft</width>
+		<drought>Yes</drought>
+		<location>Lot A4</location>
+		<gps>34.164046, -119.046256</gps>
+		<pictureid>15-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>15</plantid>
+		<commonname>Manzanita</commonname>
+		<speciesname>Manzanita sp.</speciesname>
+		<origin>California</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Winter, Spring</bloomseason>
+		<height>5-6ft</height>
+		<width>3-4ft</width>
+		<drought>Yes</drought>
+		<location>Manzanita Hall</location>
+		<gps>34.162916, -119.045438</gps>
+		<pictureid>16-1,16-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>16</plantid>
+		<commonname>Matilija Poppy</commonname>
+		<speciesname>Romneya coulteri</speciesname>
+		<origin>California</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>6-8ft</height>
+		<width>6-8ft</width>
+		<drought>Yes</drought>
+		<location>Manzanita Hall</location>
+		<gps>34.162763, -119.045401</gps>
+		<pictureid>17-1,17-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>17</plantid>
+		<commonname>Peppermint Willow</commonname>
+		<speciesname>Agonis flexuosa</speciesname>
+		<origin>Australia</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>15-25</height>
+		<width>10-15ft</width>
+		<drought>Yes</drought>
+		<location>Manzanita Hall</location>
+		<gps>34.162430, -119.045237</gps>
+		<pictureid>18-1,18-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>18</plantid>
+		<commonname>Southern Magnolia</commonname>
+		<speciesname>Magnolia grandiflora</speciesname>
+		<origin>North America</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Summer</bloomseason>
+		<height>30-60ft</height>
+		<width>20-40ft</width>
+		<drought>No</drought>
+		<location>Napa Hall</location>
+		<gps>34.163705, -119.045745</gps>
+		<pictureid>19-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>19</plantid>
+		<commonname>Kikuyu Grass</commonname>
+		<speciesname>Pennisetum clandestinum</speciesname>
+		<origin>Africa</origin>
+		<flowercolor>Insignificant</flowercolor>
+		<bloomseason>Summer</bloomseason>
+		<height>&lt;1ft</height>
+		<width>Spreading Grass</width>
+		<drought>Yes</drought>
+		<location>Napa Hall</location>
+		<gps>34.163750, -119.045846</gps>
+		<pictureid>20-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>20</plantid>
+		<commonname>Snow Flurry Ceanothus</commonname>
+		<speciesname>Ceanothus thyrsiflorus 'Snow Flurry'</speciesname>
+		<origin>California</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Winter, Spring</bloomseason>
+		<height>8-10ft</height>
+		<width>8-12ft</width>
+		<drought>Yes</drought>
+		<location>Napa Hall</location>
+		<gps>34.163851, -119.045794</gps>
+		<pictureid>21-1,21-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>21</plantid>
+		<commonname>Mexican Marigold</commonname>
+		<speciesname>Tagetes lemmonii</speciesname>
+		<origin>Mexico</origin>
+		<flowercolor>Yellow</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>4-6ft</height>
+		<width>6-8ft</width>
+		<drought>Yes</drought>
+		<location>Solano Hall</location>
+		<gps>34.163411, -119.045655</gps>
+		<pictureid>22-1,22-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>22</plantid>
+		<commonname>Creeping Mountain Lilac</commonname>
+		<speciesname>Ceanothus 'Joyce Coulter'</speciesname>
+		<origin>California</origin>
+		<flowercolor>Blue</flowercolor>
+		<bloomseason>Winter, Spring</bloomseason>
+		<height>2-3ft</height>
+		<width>5-6ft</width>
+		<drought>Yes</drought>
+		<location>Solano Hall</location>
+		<gps>34.163082, -119.045552</gps>
+		<pictureid>23-1, 23-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>23</plantid>
+		<commonname>Gran Canon Snapdragon</commonname>
+		<speciesname>Galvezia speciosa 'Gran Canon'</speciesname>
+		<origin>California</origin>
+		<flowercolor>Red</flowercolor>
+		<bloomseason>Spring, Summer, Fall</bloomseason>
+		<height>3-4ft</height>
+		<width>3-4ft</width>
+		<drought>Yes</drought>
+		<location>Solano Hall</location>
+		<gps>34.163276, -119.045631</gps>
+		<pictureid>24-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>24</plantid>
+		<commonname>Dynamite Crape Myrtle</commonname>
+		<speciesname>Lagerstroemia indica 'Dynamite'</speciesname>
+		<origin>Asia</origin>
+		<flowercolor>Red</flowercolor>
+		<bloomseason>Summer</bloomseason>
+		<height>20-25ft</height>
+		<width>10-20ft</width>
+		<drought>No</drought>
+		<location>Ironwood Hall</location>
+		<gps>34.162983, -119.04572</gps>
+		<pictureid>25-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>25</plantid>
+		<commonname>Island Oak</commonname>
+		<speciesname>Quercus tomentella</speciesname>
+		<origin>California</origin>
+		<flowercolor>Insignificant</flowercolor>
+		<bloomseason>Spring</bloomseason>
+		<height>40-60ft</height>
+		<width>20-30ft</width>
+		<drought>Yes</drought>
+		<location>Ironwood Hall</location>
+		<gps>34.163856, -119.046058</gps>
+		<pictureid>26-1,26-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>26</plantid>
+		<commonname>Wormwood</commonname>
+		<speciesname>Artemisia absinthium</speciesname>
+		<origin>Africa</origin>
+		<flowercolor>Insignificant</flowercolor>
+		<bloomseason>Summer, Fall</bloomseason>
+		<height>1ft</height>
+		<width>1-2ft</width>
+		<drought>Yes</drought>
+		<location>Ironwood Hall</location>
+		<gps>34.162797, -119.045702</gps>
+		<pictureid>27-1,27-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>27</plantid>
+		<commonname>Norfolk Island Pine</commonname>
+		<speciesname>Araucaria heterophylla</speciesname>
+		<origin>Norfolk Island</origin>
+		<flowercolor>Insignificant</flowercolor>
+		<bloomseason>Spring</bloomseason>
+		<height>150-200ft</height>
+		<width>15-25ft</width>
+		<drought>No</drought>
+		<location>Chapparal Hall</location>
+		<gps>34.162278, -119.045516</gps>
+		<pictureid>28-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>28</plantid>
+		<commonname>Strawberry Tree</commonname>
+		<speciesname>Arbutus 'Marina'</speciesname>
+		<origin>Europe</origin>
+		<flowercolor>Pink</flowercolor>
+		<bloomseason>Fall, Winter</bloomseason>
+		<height>20-40ft</height>
+		<width>10-20ft</width>
+		<drought>Yes</drought>
+		<location>Chapparal Hall</location>
+		<gps>34.162443, -119.045573</gps>
+		<pictureid>29-1,29-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>29</plantid>
+		<commonname>California Fuschia</commonname>
+		<speciesname>Epilobium canum</speciesname>
+		<origin>California</origin>
+		<flowercolor>Red</flowercolor>
+		<bloomseason>Summer, Fall</bloomseason>
+		<height>1-2ft</height>
+		<width>3-4ft</width>
+		<drought>Yes</drought>
+		<location>Chapparal Hall</location>
+		<gps>34.162172, -119.045333</gps>
+		<pictureid>30-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>30</plantid>
+		<commonname>Hercules Aloe</commonname>
+		<speciesname>Aloe 'Hercules'</speciesname>
+		<origin>South Africa</origin>
+		<flowercolor>Pink</flowercolor>
+		<bloomseason>Spring, Fall</bloomseason>
+		<height>25-40ft</height>
+		<width>15-20ft</width>
+		<drought>Yes</drought>
+		<location>Sierra Hall</location>
+		<gps>34.162152, -119.044869</gps>
+		<pictureid>31-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>31</plantid>
+		<commonname>Agave 'Blue Glow'</commonname>
+		<speciesname>Agave 'Blue Glow'</speciesname>
+		<origin>Mexico</origin>
+		<flowercolor>Red/Purple</flowercolor>
+		<bloomseason>Spring</bloomseason>
+		<height>1-2ft</height>
+		<width>2-3ft</width>
+		<drought>Yes</drought>
+		<location>Sierra Hall</location>
+		<gps>34.162197, -119.044799</gps>
+		<pictureid>32-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>32</plantid>
+		<commonname>Variegated Gypsum Century Plant</commonname>
+		<speciesname>Agave gypsophila 'Ivory Curls'</speciesname>
+		<origin>Mexico</origin>
+		<flowercolor>Yellow</flowercolor>
+		<bloomseason>Spring</bloomseason>
+		<height>2-3ft</height>
+		<width>2-3ft</width>
+		<drought>Yes</drought>
+		<location>Sierra Hall</location>
+		<gps>34.162229, -119.044673</gps>
+		<pictureid>33-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>33</plantid>
+		<commonname>Japanese Wisteria</commonname>
+		<speciesname>Wisteria floribunda</speciesname>
+		<origin>Japan</origin>
+		<flowercolor>Purple &amp; White</flowercolor>
+		<bloomseason>Spring</bloomseason>
+		<height>Climbing Vine</height>
+		<width>Spawling Vine</width>
+		<drought>No</drought>
+		<location>Aliso Hall</location>
+		<gps>34.161437, -119.044993</gps>
+		<pictureid>34-1,34-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>34</plantid>
+		<commonname>Star Jasmine</commonname>
+		<speciesname>Trachelospermum jasminoides</speciesname>
+		<origin>China</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>Climbing Vine</height>
+		<width>Spawling Vine</width>
+		<drought>No</drought>
+		<location>Aliso Hall</location>
+		<gps>34.161478, -119.045055</gps>
+		<pictureid>35-1,35-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>35</plantid>
+		<commonname>Juncus</commonname>
+		<speciesname>Juncus sp.</speciesname>
+		<origin>California</origin>
+		<flowercolor>Brown</flowercolor>
+		<bloomseason>Spring, Fall</bloomseason>
+		<height>3-4ft</height>
+		<width>3-4ft</width>
+		<drought>No</drought>
+		<location>Aliso Hall</location>
+		<gps>34.160970, -119.044805</gps>
+		<pictureid>36-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>36</plantid>
+		<commonname>Dr. Hurd Manzanita</commonname>
+		<speciesname>Arctostaphylos manzanita 'Dr. Hurd'</speciesname>
+		<origin>California</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Winter</bloomseason>
+		<height>12-16ft</height>
+		<width>10-15ft</width>
+		<drought>Yes</drought>
+		<location>Arroyo Hall</location>
+		<gps>34.160679, -119.044675</gps>
+		<pictureid>37-1, 37-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>37</plantid>
+		<commonname>Island Snapdragon</commonname>
+		<speciesname>Galvezia speciosa 'Bocarosa'</speciesname>
+		<origin>California</origin>
+		<flowercolor>Red</flowercolor>
+		<bloomseason>Spring, Summer, Fall</bloomseason>
+		<height>3-4ft</height>
+		<width>4-5ft</width>
+		<drought>Yes</drought>
+		<location>Arroyo Hall</location>
+		<gps>34.160752, -119, 044704</gps>
+		<pictureid>38-1,38-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>38</plantid>
+		<commonname>Pink Muhly Grass</commonname>
+		<speciesname>Muhlenbergia capillaris</speciesname>
+		<origin>North America</origin>
+		<flowercolor>Pink</flowercolor>
+		<bloomseason>Fall Winter</bloomseason>
+		<height>2-3ft</height>
+		<width>2-3ft</width>
+		<drought>Yes</drought>
+		<location>Arroyo Hall</location>
+		<gps>34.160766, -119.044710</gps>
+		<pictureid>39-1,39-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>39</plantid>
+		<commonname>Canyon Prince Wild Rye</commonname>
+		<speciesname>Leymus condensatus 'Canyon Prince'</speciesname>
+		<origin>California</origin>
+		<flowercolor>Wheat</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>2-3ft</height>
+		<width>2-3ft</width>
+		<drought>Yes</drought>
+		<location>Bell Tower West</location>
+		<gps>34.160582, -119.044448</gps>
+		<pictureid>40-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>40</plantid>
+		<commonname>Catalina Cherry</commonname>
+		<speciesname>Prunus ilicifolia ssp lyonii</speciesname>
+		<origin>California</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Spring</bloomseason>
+		<height>15-25ft</height>
+		<width>10-15ft</width>
+		<drought>Yes</drought>
+		<location>Bell Tower West</location>
+		<gps>34.160576, -119.044409</gps>
+		<pictureid>41-1,41-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>41</plantid>
+		<commonname>Toyon</commonname>
+		<speciesname>Heteromeles arbutifolia</speciesname>
+		<origin>California</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Summer</bloomseason>
+		<height>10-20ft</height>
+		<width>10-12ft</width>
+		<drought>Yes</drought>
+		<location>Bell Tower West</location>
+		<gps>34.160882, -119.044549</gps>
+		<pictureid>42-1,42-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>42</plantid>
+		<commonname>San Diego Sunflower</commonname>
+		<speciesname>Viguiera laciniata</speciesname>
+		<origin>California</origin>
+		<flowercolor>Yellow</flowercolor>
+		<bloomseason>Spring</bloomseason>
+		<height>3-4ft</height>
+		<width>3-4ft</width>
+		<drought>Yes</drought>
+		<location>South Quad</location>
+		<gps>34.160838, -119.043107</gps>
+		<pictureid>43-1,43-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>43</plantid>
+		<commonname>Blue Bedder</commonname>
+		<speciesname>Penstemon heterophyllus 'Margarita BOP' </speciesname>
+		<origin>California</origin>
+		<flowercolor>Blue Violet</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>1-3ft</height>
+		<width>1-2ft</width>
+		<drought>Yes</drought>
+		<location>South Quad</location>
+		<gps>34.160783, -119.043187</gps>
+		<pictureid>44-1,44-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>44</plantid>
+		<commonname>Orange Bells</commonname>
+		<speciesname>Tecoma x smithii</speciesname>
+		<origin>South America</origin>
+		<flowercolor>Orange</flowercolor>
+		<bloomseason>Summer, Fall</bloomseason>
+		<height>8-12ft</height>
+		<width>8-12ft</width>
+		<drought>Yes</drought>
+		<location>South Quad</location>
+		<gps>34.160903, -119.042972</gps>
+		<pictureid>45-1,45-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>45</plantid>
+		<commonname>Dark Star Ceanothus</commonname>
+		<speciesname>Ceanothus 'Dark Star'</speciesname>
+		<origin>California</origin>
+		<flowercolor>Blue</flowercolor>
+		<bloomseason>Winter, Spring</bloomseason>
+		<height>4-6ft</height>
+		<width>6-10ft</width>
+		<drought>Yes</drought>
+		<location>Islands Cafe</location>
+		<gps>34.160684, -119.042289</gps>
+		<pictureid>46-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>46</plantid>
+		<commonname>Stalked Bulbine</commonname>
+		<speciesname>Bulbine frutescens</speciesname>
+		<origin>South Africa</origin>
+		<flowercolor>Yellow</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>1ft</height>
+		<width>1-3ft</width>
+		<drought>Yes</drought>
+		<location>Islands Cafe</location>
+		<gps>34.160866, -119.042316</gps>
+		<pictureid>47-1,47-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>47</plantid>
+		<commonname>Jade</commonname>
+		<speciesname>Crassula ovata</speciesname>
+		<origin>South Africa</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Winter, Spring</bloomseason>
+		<height>4-6ft</height>
+		<width>3-4ft</width>
+		<drought>Yes</drought>
+		<location>Horseshoe Courtyard</location>
+		<gps>34.161216, -119.041931</gps>
+		<pictureid>48-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>48</plantid>
+		<commonname>Oleander</commonname>
+		<speciesname>Nerium oleander</speciesname>
+		<origin>Europe</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Spring</bloomseason>
+		<height>8-10ft</height>
+		<width>8-10ft</width>
+		<drought>Yes</drought>
+		<location>Horseshoe Courtyard</location>
+		<gps>34.161107, -119.041866</gps>
+		<pictureid>49-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>49</plantid>
+		<commonname>Elephant's Food</commonname>
+		<speciesname>Portulacaria afra</speciesname>
+		<origin>South Africa</origin>
+		<flowercolor>Purple</flowercolor>
+		<bloomseason>Summer</bloomseason>
+		<height>8-12ft</height>
+		<width>4-6ft</width>
+		<drought>Yes</drought>
+		<location>Horseshoe Courtyard</location>
+		<gps>34.161142, -119.041880</gps>
+		<pictureid>50-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>50</plantid>
+		<commonname>Ponytail Palm</commonname>
+		<speciesname>Beaucarnea recurvata</speciesname>
+		<origin>Mexico</origin>
+		<flowercolor>Cream</flowercolor>
+		<bloomseason>Infrequent</bloomseason>
+		<height>15-20ft</height>
+		<width>6-12ft</width>
+		<drought>Yes</drought>
+		<location>Horseshoe Courtyard</location>
+		<gps>34.160908, -119.04184</gps>
+		<pictureid>51-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>51</plantid>
+		<commonname>Tree Philodendron</commonname>
+		<speciesname>Philodendron selloum</speciesname>
+		<origin>Brazil</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Summer</bloomseason>
+		<height>6-10ft</height>
+		<width>6-8ft</width>
+		<drought>No</drought>
+		<location>Malibu Hall</location>
+		<gps>34.161345, -119.041142</gps>
+		<pictureid>52-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>52</plantid>
+		<commonname>English Ivy</commonname>
+		<speciesname>Hedera helix</speciesname>
+		<origin>Europe</origin>
+		<flowercolor>Green &amp; Yellow</flowercolor>
+		<bloomseason>Summer, Fall</bloomseason>
+		<height>Climbing Vine</height>
+		<width>Sprawling Vine</width>
+		<drought>Yes</drought>
+		<location>Malibu Hall</location>
+		<gps>34.161642, -119.040370</gps>
+		<pictureid>53-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>53</plantid>
+		<commonname>Heavenly Bamboo</commonname>
+		<speciesname>Nandina domestica</speciesname>
+		<origin>Asia</origin>
+		<flowercolor>Pink &amp; White</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>6-8ft</height>
+		<width>4-5ft</width>
+		<drought>Yes</drought>
+		<location>Malibu Hall</location>
+		<gps>34.161313, -119.041239</gps>
+		<pictureid>54-1,54-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>54</plantid>
+		<commonname>Torch Aloe</commonname>
+		<speciesname>Aloe arborescens</speciesname>
+		<origin>South Africa</origin>
+		<flowercolor>Red</flowercolor>
+		<bloomseason>Fall, Winter</bloomseason>
+		<height>8-10ft</height>
+		<width>8-10f</width>
+		<drought>Yes</drought>
+		<location>ADA Courtyard</location>
+		<gps>34.161600, -119.042007</gps>
+		<pictureid>55-1,55-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>55</plantid>
+		<commonname>Mexican Fan Palm</commonname>
+		<speciesname>Washingtonia robusta</speciesname>
+		<origin>Mexico</origin>
+		<flowercolor>Cream</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>80ft</height>
+		<width>10ft</width>
+		<drought>Yes</drought>
+		<location>ADA Courtyard</location>
+		<gps>34.161424, -119.042266</gps>
+		<pictureid>56-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>56</plantid>
+		<commonname>Lily of the Nile</commonname>
+		<speciesname>Agapanthus sp.</speciesname>
+		<origin>South Africa</origin>
+		<flowercolor>Purple</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>2-3ft</height>
+		<width>2-3ft</width>
+		<drought>No</drought>
+		<location>ADA Courtyard</location>
+		<gps>34.161689, -119.042047</gps>
+		<pictureid>57-1,57-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>57</plantid>
+		<commonname>Society Garlic</commonname>
+		<speciesname>Tulbaghia violacea</speciesname>
+		<origin>South Africa</origin>
+		<flowercolor>Purple</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>1-3ft</height>
+		<width>1-2ft</width>
+		<drought>No</drought>
+		<location>Bell Tower East Courtyard</location>
+		<gps>34.161189, -119.042723</gps>
+		<pictureid>58-1,58-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>58</plantid>
+		<commonname>Purple Lantana</commonname>
+		<speciesname>Lantana montevidensis</speciesname>
+		<origin>South America</origin>
+		<flowercolor>Purple</flowercolor>
+		<bloomseason>All Year</bloomseason>
+		<height>1ft</height>
+		<width>8-10ft</width>
+		<drought>Yes</drought>
+		<location>Bell Tower East Courtyard</location>
+		<gps>34.161275, -119.042757</gps>
+		<pictureid>59-1,59-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>59</plantid>
+		<commonname>Bear's Breeches</commonname>
+		<speciesname>Acanthus mollis</speciesname>
+		<origin>Portugal</origin>
+		<flowercolor>Pink &amp; White</flowercolor>
+		<bloomseason>Spring</bloomseason>
+		<height>3-4ft</height>
+		<width>2-3ft</width>
+		<drought>No</drought>
+		<location>Bell Tower East Courtyard</location>
+		<gps>34.161359, -119.042889</gps>
+		<pictureid>60-1,60-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>60</plantid>
+		<commonname>Bird of Paradise</commonname>
+		<speciesname>Strelitzia reginae</speciesname>
+		<origin>South Africa</origin>
+		<flowercolor>Orange</flowercolor>
+		<bloomseason>Spring, Summer, Fall</bloomseason>
+		<height>4-6ft</height>
+		<width>4-6ft</width>
+		<drought>No</drought>
+		<location>Fountain Courtyard</location>
+		<gps>34.161126, -119.043314</gps>
+		<pictureid>61-1,61-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>61</plantid>
+		<commonname>Australian Tree Fern</commonname>
+		<speciesname>Cyathea cooperi</speciesname>
+		<origin>Australia</origin>
+		<flowercolor>None</flowercolor>
+		<bloomseason>None</bloomseason>
+		<height>15-20ft</height>
+		<width>8-12ft</width>
+		<drought>No</drought>
+		<location>Fountain Courtyard</location>
+		<gps>34.161173, -119.043021</gps>
+		<pictureid>62-1,62-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>62</plantid>
+		<commonname>Variegated Vinca Vine</commonname>
+		<speciesname>Vinca major 'variegata'</speciesname>
+		<origin>Mediterranean</origin>
+		<flowercolor>Purple</flowercolor>
+		<bloomseason>Spring, Summer, Fall</bloomseason>
+		<height>1ft</height>
+		<width>Spawling vine</width>
+		<drought>Yes</drought>
+		<location>Fountain Courtyard</location>
+		<gps>34.161068, -119.043115</gps>
+		<pictureid>63-1,63-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>63</plantid>
+		<commonname>Natal Plum</commonname>
+		<speciesname>Carissa macrocarpa</speciesname>
+		<origin>South Africa</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>3-6ft</height>
+		<width>3-6ft</width>
+		<drought>Yes</drought>
+		<location>Burgess Courtyard</location>
+		<gps>34.161028, -119.043537</gps>
+		<pictureid>64-1,64-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>64</plantid>
+		<commonname>Firecracker Plant</commonname>
+		<speciesname>Russelia equisetiformis</speciesname>
+		<origin>Mexico</origin>
+		<flowercolor>Red</flowercolor>
+		<bloomseason>Spring, Summer, Fall</bloomseason>
+		<height>3-5ft</height>
+		<width>3-5ft</width>
+		<drought>No</drought>
+		<location>Burgess Courtyard</location>
+		<gps>34.160881, -119.043807</gps>
+		<pictureid>65-1,65-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>65</plantid>
+		<commonname>Breath of Heaven</commonname>
+		<speciesname>Coleonema pulchellum</speciesname>
+		<origin>South Africa</origin>
+		<flowercolor>Pink</flowercolor>
+		<bloomseason>Winter, Spring</bloomseason>
+		<height>4-6ft</height>
+		<width>4-6ft</width>
+		<drought>No</drought>
+		<location>Burgess Courtyard</location>
+		<gps>34.161066, -119.043580</gps>
+		<pictureid>66-1,66-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>66</plantid>
+		<commonname>Sea Lavendar</commonname>
+		<speciesname>Limonium perezii</speciesname>
+		<origin>Canary Islands</origin>
+		<flowercolor>Purple</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>2-3ft</height>
+		<width>2-3ft</width>
+		<drought>Yes</drought>
+		<location>Student Union</location>
+		<gps>34.161540, -119.044226</gps>
+		<pictureid>67-1,67-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>67</plantid>
+		<commonname>Blue Chalksticks</commonname>
+		<speciesname>Senecio serpens</speciesname>
+		<origin>South Africa</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Summer</bloomseason>
+		<height>1ft</height>
+		<width>2-3ft</width>
+		<drought>Yes</drought>
+		<location>Student Union </location>
+		<gps>34.160825, -119.044145</gps>
+		<pictureid>68-1,68-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>68</plantid>
+		<commonname>Columbine</commonname>
+		<speciesname>Aquilegia chrysantha</speciesname>
+		<origin>California</origin>
+		<flowercolor>Yellow</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>1-3ft</height>
+		<width>1-2ft</width>
+		<drought>No</drought>
+		<location>Student Union </location>
+		<gps>34.161512, -119.044590</gps>
+		<pictureid>69-1,69-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>69</plantid>
+		<commonname>Tree Mallow</commonname>
+		<speciesname>Lavatera maritima</speciesname>
+		<origin>Mediterranean</origin>
+		<flowercolor>Purple</flowercolor>
+		<bloomseason>All Year</bloomseason>
+		<height>6-8ft</height>
+		<width>8-12ft</width>
+		<drought>Yes</drought>
+		<location>University Hall</location>
+		<gps>34.162637, -119.042980</gps>
+		<pictureid>70-1,70-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>70</plantid>
+		<commonname>Island Bush Poppy</commonname>
+		<speciesname>Dendromecon harfordii </speciesname>
+		<origin>California</origin>
+		<flowercolor>Yellow</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>6-10ft</height>
+		<width>6-12ft</width>
+		<drought>Yes</drought>
+		<location>University Hall</location>
+		<gps>34.162552, -119.043214</gps>
+		<pictureid>71-1,71-2,71-3</pictureid>
+	</entry>
+	<entry>
+		<plantid>71</plantid>
+		<commonname>Rock Purslane</commonname>
+		<speciesname>Cistanthe grandiflora</speciesname>
+		<origin>Chile</origin>
+		<flowercolor>Purple</flowercolor>
+		<bloomseason>Spring, Fall</bloomseason>
+		<height>1ft</height>
+		<width>2-3ft</width>
+		<drought>Yes</drought>
+		<location>University Hall</location>
+		<gps>34.162568, -119.043129</gps>
+		<pictureid>72-1,72-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>72</plantid>
+		<commonname>Pink Rockrose</commonname>
+		<speciesname>Cistus x skanbergii</speciesname>
+		<origin>Greece</origin>
+		<flowercolor>Light Pink</flowercolor>
+		<bloomseason>Spring</bloomseason>
+		<height>2-3ft</height>
+		<width>2-3ft</width>
+		<drought>Yes</drought>
+		<location>RA Lot</location>
+		<gps>34.162760, -119.043055</gps>
+		<pictureid>73-1,73-2, 73-3</pictureid>
+	</entry>
+	<entry>
+		<plantid>73</plantid>
+		<commonname>Sundrops</commonname>
+		<speciesname>Calylophus berlandieri</speciesname>
+		<origin>North America</origin>
+		<flowercolor>Yellow</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>1ft</height>
+		<width>2-3ft</width>
+		<drought>Yes</drought>
+		<location>RA Lot</location>
+		<gps>34.162715, -119.043416</gps>
+		<pictureid>74-1,74-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>74</plantid>
+		<commonname>Coyote Mint</commonname>
+		<speciesname>Monardella villosa</speciesname>
+		<origin>California</origin>
+		<flowercolor>Purple</flowercolor>
+		<bloomseason>Spring</bloomseason>
+		<height>1ft</height>
+		<width>1-2ft</width>
+		<drought>Yes</drought>
+		<location>RA Lot</location>
+		<gps>34.162730, -119.043447</gps>
+		<pictureid>75-1,75-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>75</plantid>
+		<commonname>Howard McMinn Manzanita</commonname>
+		<speciesname>Arctostaphylos densiflora 'Howard McMinn'</speciesname>
+		<origin>California</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Winter, Spring</bloomseason>
+		<height>6-10ft</height>
+		<width>6-12ft</width>
+		<drought>Yes</drought>
+		<location>Placer Hall</location>
+		<gps>34.163062, -119.042910</gps>
+		<pictureid>76-1,76-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>76</plantid>
+		<commonname>Penta</commonname>
+		<speciesname> Pentas lanceolata</speciesname>
+		<origin>Africa</origin>
+		<flowercolor>Red</flowercolor>
+		<bloomseason>Spring, Summer, Fall</bloomseason>
+		<height>2-3ft</height>
+		<width>2-3ft</width>
+		<drought>No</drought>
+		<location>Placer Hall</location>
+		<gps>34.163335, -119.042955</gps>
+		<pictureid>77-1,77-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>77</plantid>
+		<commonname>Gaura</commonname>
+		<speciesname>Gaura lindheimeri</speciesname>
+		<origin>North America</origin>
+		<flowercolor>White &amp; Pink</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>3-4ft</height>
+		<width>2-3ft</width>
+		<drought>Yes</drought>
+		<location>Placer Hall</location>
+		<gps>34.163455, -119.042998</gps>
+		<pictureid>78-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>78</plantid>
+		<commonname>Creeping Wild Rye</commonname>
+		<speciesname>Leymus triticoides</speciesname>
+		<origin>California</origin>
+		<flowercolor>Wheat</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>2-3ft</height>
+		<width>Spreading Grass</width>
+		<drought>Yes</drought>
+		<location>Martin V Smith</location>
+		<gps>34.164295, -119.043132</gps>
+		<pictureid>79-1,79-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>79</plantid>
+		<commonname>Fortnight Lily</commonname>
+		<speciesname>Dietes grandiflora</speciesname>
+		<origin>South Africa</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>3-4ft</height>
+		<width>2-3ft</width>
+		<drought>Yes</drought>
+		<location>Martin V Smith</location>
+		<gps>34.163858, -119.042955</gps>
+		<pictureid>80-1,80-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>80</plantid>
+		<commonname>Myoporum</commonname>
+		<speciesname>Myoporum parvifolium</speciesname>
+		<origin>Australia</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>&lt;1ft</height>
+		<width>8-10ft</width>
+		<drought>Yes</drought>
+		<location>Martin V Smith</location>
+		<gps>34.163817, -119.04307</gps>
+		<pictureid>81-1,81-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>81</plantid>
+		<commonname>Dwarf Red Crape Myrtle</commonname>
+		<speciesname>Lagerstroemia indica 'Dwarf Red'</speciesname>
+		<origin>Asia</origin>
+		<flowercolor>Red</flowercolor>
+		<bloomseason>Summer</bloomseason>
+		<height>3-6ft</height>
+		<width>3-6ft</width>
+		<drought>Yes</drought>
+		<location>Sage Hall</location>
+		<gps>34.164348, -119.042509</gps>
+		<pictureid>82-1,82-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>82</plantid>
+		<commonname>Lemonade Berry</commonname>
+		<speciesname>Rhus integrifolia</speciesname>
+		<origin>California</origin>
+		<flowercolor>Pink</flowercolor>
+		<bloomseason>Spring</bloomseason>
+		<height>6-10ft</height>
+		<width>10-12ft</width>
+		<drought>Yes</drought>
+		<location>Sage Hall</location>
+		<gps>34.163732, -119.042159</gps>
+		<pictureid>83-1,83-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>83</plantid>
+		<commonname>Peach Hibiscus</commonname>
+		<speciesname>Hibiscus sp.</speciesname>
+		<origin>South Africa</origin>
+		<flowercolor>Peach</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>10ft</height>
+		<width>10ft</width>
+		<drought>No</drought>
+		<location>Sage Hall</location>
+		<gps>34.163772, -119.041999</gps>
+		<pictureid>84-1,84-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>84</plantid>
+		<commonname>Blue Fescue</commonname>
+		<speciesname>Festuca glauca 'Elijah Blue'</speciesname>
+		<origin>France</origin>
+		<flowercolor>Wheat</flowercolor>
+		<bloomseason>Summer</bloomseason>
+		<height>1ft</height>
+		<width>2-3ft</width>
+		<drought>Yes</drought>
+		<location>Broome Library</location>
+		<gps>34.162816, -119.041444</gps>
+		<pictureid>85-1</pictureid>
+	</entry>
+	<entry>
+		<plantid>85</plantid>
+		<commonname>Iceberg Rose</commonname>
+		<speciesname>Rosa 'Iceberg'</speciesname>
+		<origin>Garden</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>4-6ft</height>
+		<width>3-5ft</width>
+		<drought>No</drought>
+		<location>Broome Library</location>
+		<gps>34.162973, -119.041904</gps>
+		<pictureid>86-1,86-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>86</plantid>
+		<commonname>Desert Museum Palo Verde</commonname>
+		<speciesname>Cercidium x 'Desert Museum'</speciesname>
+		<origin>Mexico</origin>
+		<flowercolor>Yellow</flowercolor>
+		<bloomseason>All Year</bloomseason>
+		<height>25ft</height>
+		<width>20ft</width>
+		<drought>Yes</drought>
+		<location>Broome Library</location>
+		<gps>34.162928, -119.041464</gps>
+		<pictureid>87-1,87-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>87</plantid>
+		<commonname>Coffeeberry</commonname>
+		<speciesname>Rhamnus californica 'Mound San Bruno' </speciesname>
+		<origin>California</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Spring</bloomseason>
+		<height>6-8ft</height>
+		<width>6-8ft</width>
+		<drought>Yes</drought>
+		<location>Madera Hall</location>
+		<gps>34.162692, -119.044517</gps>
+		<pictureid>88-1,88-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>88</plantid>
+		<commonname>Yellow Wild Iris</commonname>
+		<speciesname>Dietes bicolor</speciesname>
+		<origin>South Africa</origin>
+		<flowercolor>Yellow</flowercolor>
+		<bloomseason>Spring, Fall</bloomseason>
+		<height>2-3ft</height>
+		<width>2-3ft</width>
+		<drought>Yes</drought>
+		<location>Madera Hall</location>
+		<gps>34.162968, -119.044005</gps>
+		<pictureid>89-1,89-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>89</plantid>
+		<commonname>Brisbane Box Tree</commonname>
+		<speciesname>Lophostemon confertus</speciesname>
+		<origin>Australia</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>40-60ft</height>
+		<width>5-10ft</width>
+		<drought>Yes</drought>
+		<location>Madera Hall</location>
+		<gps>34.162614, -119.044594</gps>
+		<pictureid>90-1, 90-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>90</plantid>
+		<commonname>Deer Grass</commonname>
+		<speciesname>Muhlenbergia rigens</speciesname>
+		<origin>California</origin>
+		<flowercolor>Wheat</flowercolor>
+		<bloomseason>Summer</bloomseason>
+		<height>4-5ft</height>
+		<width>3-4ft</width>
+		<drought>Yes</drought>
+		<location>Del Norte Hall</location>
+		<gps>34.163202, -119.043776</gps>
+		<pictureid>91-1,91-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>91</plantid>
+		<commonname>Spreading Purple Sage</commonname>
+		<speciesname>Salvia leucophylla 'Point Sal Spreader'</speciesname>
+		<origin>California</origin>
+		<flowercolor>Pink</flowercolor>
+		<bloomseason>Spring</bloomseason>
+		<height>2-3ft</height>
+		<width>8-10ft</width>
+		<drought>Yes</drought>
+		<location>Del Norte Hall</location>
+		<gps>34.163068, -119.043837</gps>
+		<pictureid>92-1,92-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>92</plantid>
+		<commonname>Coast Rosemary</commonname>
+		<speciesname>Westringia fruticosa</speciesname>
+		<origin>Australia</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>All Year</bloomseason>
+		<height>4-6ft</height>
+		<width>8-12ft</width>
+		<drought>Yes</drought>
+		<location>Del Norte Hall</location>
+		<gps>34.163050, -119.044410</gps>
+		<pictureid>93-1,93-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>93</plantid>
+		<commonname>Bush Anemone</commonname>
+		<speciesname>Carpenteria californica</speciesname>
+		<origin>California</origin>
+		<flowercolor>White</flowercolor>
+		<bloomseason>Spring, Summer</bloomseason>
+		<height>6-8ft</height>
+		<width>4-5ft</width>
+		<drought>Yes</drought>
+		<location>Ojai Hall</location>
+		<gps>34.161905, -119.042306</gps>
+		<pictureid>94-1,94-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>94</plantid>
+		<commonname>Ray Hartman Wild Lilac</commonname>
+		<speciesname>Ceanothus 'Ray Hartman'</speciesname>
+		<origin>California</origin>
+		<flowercolor>Blue</flowercolor>
+		<bloomseason>Winter, Spring</bloomseason>
+		<height>12-20ft</height>
+		<width>10-12ft</width>
+		<drought>Yes</drought>
+		<location>Ojai Hall</location>
+		<gps>34.161868, -119.041992</gps>
+		<pictureid>95-1,95-2</pictureid>
+	</entry>
+	<entry>
+		<plantid>95</plantid>
+		<commonname>John Dourley Manzanita</commonname>
+		<speciesname>Arctostaphylos 'John Dourley'</speciesname>
+		<origin>California</origin>
+		<flowercolor>Pink</flowercolor>
+		<bloomseason>Summer</bloomseason>
+		<height>1ft</height>
+		<width>2-4ft</width>
+		<drought>Yes</drought>
+		<location>Ojai Hall</location>
+		<gps>34.161965, -119.042097</gps>
+		<pictureid>96-1,96-2</pictureid>
+	</entry>
+</plantdata>
