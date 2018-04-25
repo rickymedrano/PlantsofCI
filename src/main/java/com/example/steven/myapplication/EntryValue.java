@@ -12,15 +12,4 @@ public class EntryValue <T>{
     public T getObj() {
         return this.obj;
     }
-
-    public Boolean compareObj(T compare){
-        Boolean check = false;
-
-        if(obj.equals(compare)){
-            check = true;
-        }
-
-        return check;
-    }
-
 }

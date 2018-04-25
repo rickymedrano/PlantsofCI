@@ -47,15 +47,10 @@ public class PlantSpecification extends AppCompatActivity implements OpenDatabas
         plantSpecies.setText(database.getFullDatabase().get(plantID).getSpeciesName().getObj());
         //Set Location
         TextView plantLocation = findViewById(R.id.location);
-        String[] location = database.getFullDatabase().get(plantID).getLocation().getObj();
-        StringBuilder stringLocation = new StringBuilder();
-        for (int i = 0; i < location.length; i++)
-        {
-            stringLocation.append(location[i]);
-        }
-        plantLocation.setText(stringLocation);
+        String location = database.getFullDatabase().get(plantID).getLocation().getObj();
+        plantLocation.setText(location);
         //Set Flower Color
-        TextView plantFlowerColor = findViewById(R.id.flowername);
+        TextView plantFlowerColor = findViewById(R.id.flowercolor);
         plantFlowerColor.setText(database.getFullDatabase().get(plantID).getFlowerColor().getObj());
         //Set Origin
         TextView plantOrigin = findViewById(R.id.origin);
@@ -66,11 +61,11 @@ public class PlantSpecification extends AppCompatActivity implements OpenDatabas
         //Set Drought Tolerance
         TextView plantDroughtTolerance = findViewById(R.id.drought);
         plantDroughtTolerance.setText(database.getFullDatabase().get(plantID).getDrought().getObj());
-//        //Set Height
-        TextView plantHeight = findViewById(R.id.plantheight);
+        //Set Height
+        TextView plantHeight = findViewById(R.id.plantHeight);
         plantHeight.setText(database.getFullDatabase().get(plantID).getPlantHeight().getObj());
         //Set Width
-        TextView plantWidth = findViewById(R.id.textView4);
+        TextView plantWidth = findViewById(R.id.plantWidth);
         plantWidth.setText(database.getFullDatabase().get(plantID).getPlantWidth().getObj());
         //Set Image
         ImageView imageView = (ImageView)findViewById(R.id.imageView2);

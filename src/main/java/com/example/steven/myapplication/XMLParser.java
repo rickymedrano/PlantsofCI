@@ -59,13 +59,13 @@ public class XMLParser {
         public final EntryValue<String> width;
         public final EntryValue<String> height;
         public final EntryValue<String> drought;
-        public final EntryValue<String[]> location;
+        public final EntryValue<String> location;
         public final EntryValue<Float[]> gps;
         public final EntryValue<String[]> pictureid;
 
         private Entry(EntryValue<Integer> plantid, EntryValue<String> commonname, EntryValue<String> speciesname, EntryValue<String> origin,
                 EntryValue<String> flowercolor, EntryValue<String> bloomseason, EntryValue<String> width, EntryValue<String> height, EntryValue<String> drought,
-                EntryValue<String[]> location, EntryValue<Float[]> gps, EntryValue<String[]> pictureid)
+                EntryValue<String> location, EntryValue<Float[]> gps, EntryValue<String[]> pictureid)
         {
             this.plantid = plantid;
             this.commonname = commonname;
@@ -91,7 +91,7 @@ public class XMLParser {
         public EntryValue<String> getPlantWidth(){ return this.width; }
         public EntryValue<String> getPlantHeight(){ return this.height; }
         public EntryValue<String> getDrought(){ return this.drought; }
-        public EntryValue<String[]> getLocation(){ return this.location; }
+        public EntryValue<String> getLocation(){ return this.location; }
         public EntryValue<Float[]> getGPS(){ return this.gps; }
         public EntryValue<String[]> getPictureID(){ return this.pictureid; }
     }
@@ -109,7 +109,7 @@ public class XMLParser {
         EntryValue<String> width = null;
         EntryValue<String> height = null;
         EntryValue<String> drought = null;
-        EntryValue<String[]> location = null;
+        EntryValue<String> location = null;
         EntryValue<Float[]> gps = null;
         EntryValue<String[]> pictureid = null;
 
@@ -257,12 +257,11 @@ public class XMLParser {
         return drought;
     }
     // Processes location tags in the feed.
-    private EntryValue<String[]> readLocation(XmlPullParser parser) throws IOException, XmlPullParserException {
+    private EntryValue<String> readLocation(XmlPullParser parser) throws IOException, XmlPullParserException {
         parser.require(XmlPullParser.START_TAG, ns, "location");
 
         String rawText = readText(parser);
-        String[] rawToArray = rawText.split(",");
-        EntryValue<String[]> location = new EntryValue<>(rawToArray);
+        EntryValue<String> location = new EntryValue<>(rawText);
 
         parser.require(XmlPullParser.END_TAG, ns, "location");
         return location;
