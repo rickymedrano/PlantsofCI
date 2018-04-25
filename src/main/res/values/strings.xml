@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/main/res/values/strings.xml
 <resources>
     <string name="app_name">My Application</string>
     <string name="plants_of_ci">Plants of CI</string>
@@ -28,3 +29,36 @@
     <string name="bloomseason">Bloomseason:</string>
     <string name="origin">Origin:</string>
 </resources>
+=======
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="plants_of_ci">Plants of CI</string>
+    <string name="interactive_map">Interactive Map</string>
+    <string name="plant_search">Plant Search</string>
+    <string name="about">About Page</string>
+    <string name="dolphin">dolphin icon</string>
+    <string name="search_list">Search List</string>
+    <string name="central_map"/>
+    <string name="african_tulip_tree">African Tulip Tree</string>
+    <string name="plant2">plant2</string>
+    <string name="plant3">plant3</string>
+    <string name="plant4">plant4</string>
+    <string name="plant5">plant5</string>
+    <string name="plant6">plant6</string>
+    <string name="plant7">plant7</string>
+    <string name="plant8">plant8</string>
+    <string name="plant9">plant9</string>
+    <string name="aboutPage">Created by Ricky Medrano, Tyler Allen, Steven
+        Romp, and Travis Wight for Comp 350. \nArt is done by Sierra Lillian (SierraLillianArt).
+    </string>
+    <string name="species_name">Species name:</string>
+    <string name="location">Location</string>
+    <string name="flower_color">Flower Color:</string>
+    <string name="width">Width</string>
+    <string name="height">Height</string>
+    <string name="drought_tolerance">Drought Tolerance:</string>
+    <string name="bloomseason">Bloomseason:</string>
+    <string name="origin">Origin:</string>
+    <string name="search_hint">Search by Common Name...</string>
+</resources>
+>>>>>>> 01a6826d2180ad5e52f6f26ff86ddbee4d6187e3:app/src/main/res/values/strings.xml
