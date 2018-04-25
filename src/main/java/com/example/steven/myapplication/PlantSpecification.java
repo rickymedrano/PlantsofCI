@@ -74,7 +74,7 @@ public class PlantSpecification extends AppCompatActivity implements OpenDatabas
         plantWidth.setText(database.getFullDatabase().get(plantID).getPlantWidth().getObj());
         //Set Image
         ImageView imageView = (ImageView)findViewById(R.id.imageView2);
-        Picasso.get().load("file:///android_asset/PlantPictures/" + Integer.toString(plantID) + "-1.png").placeholder(R.drawable.cast_album_art_placeholder).into(imageView);
+        Picasso.get().load("file:///android_asset/PlantPictures/" + Integer.toString(plantID+1) + "-1.png").placeholder(R.drawable.cast_album_art_placeholder).into(imageView);
 
     }
 }

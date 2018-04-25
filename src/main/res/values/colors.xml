@@ -11,7 +11,7 @@
 
 
     <!--Ricky's Colors-->
-
+    <color name="divider">#727272</color>
 
     <!--Tyler's Colors-->
     <color name="colorBlack">#000000</color>

@@ -111,7 +111,6 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         googleMap.getUiSettings().setMyLocationButtonEnabled(false);
         googleMap.getUiSettings().setMapToolbarEnabled(false);
 
-
         // set markers, plants, buildings, etc.
         googleMap.setOnCameraChangeListener(new OnCameraChangeListener() {
             @Override
@@ -277,11 +276,18 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         switch (requestCode) {
             case MY_PERMISSIONS_REQUEST_LOCATION: {
                 // If request is cancelled, the result arrays are empty.
-                if (grantResults.length <= 0
-                        || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    // permission was granted, yay!
+                    if (ActivityCompat.checkSelfPermission(this,
+                            Manifest.permission.ACCESS_FINE_LOCATION)
+                            == PackageManager.PERMISSION_GRANTED) {
+                        mGoogleMap.setMyLocationEnabled(true);
+                    }
+                } else {
                     // permission denied,Disable the functionality that depends on this permission.
                     Toast.makeText(this, "permission denied", Toast.LENGTH_LONG).show();
-
                 }
             }
         }
