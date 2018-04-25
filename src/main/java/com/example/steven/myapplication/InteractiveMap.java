@@ -129,15 +129,25 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
             public void onInfoWindowClick(Marker marker) {
-                for(int plantIDIndex = 0; plantIDIndex < database.getFullDatabase().size(); plantIDIndex++ )
-                {
-                    int plantID = database.getFullDatabase().get(plantIDIndex).getPlantID().getObj();
-                    if(marker.getTag().equals(plantID))
-                    {
+                for (int plantIDIndex = 0; plantIDIndex < database.getFullDatabase().size();
+                        plantIDIndex++) {
+                    int plantID = database.getFullDatabase().get(
+                            plantIDIndex).getPlantID().getObj();
+                    // start activity for plant specification page
+                    if (marker.getTag().equals(plantID)) {
                         Intent intent = new Intent(InteractiveMap.this, PlantSpecification.class);
                         intent.putExtra("plantID", plantID);
                         startActivity(intent);
                     }
+                    // start activity for plant list of buidling
+                    else
+                    {
+                        String buildingName = (String)marker.getTag();
+                        Intent intent = new Intent(InteractiveMap.this, PlantSearch.class);
+                        intent.putExtra("buildingName", buildingName);
+                        startActivity(intent);
+                    }
+
                 }
             }
         });
@@ -228,13 +238,14 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
             Float[] location;
             LatLng plantLocation;
             String plantName;
-            for (int dataIndex = 0; dataIndex < database.getFullDatabase().size(); dataIndex++)
-            {
-                plantID =  database.getFullDatabase().get(dataIndex).getPlantID().getObj();
+            for (int dataIndex = 0; dataIndex < database.getFullDatabase().size(); dataIndex++) {
+                plantID = database.getFullDatabase().get(dataIndex).getPlantID().getObj();
                 location = database.getFullDatabase().get(dataIndex).getGPS().getObj();
-                plantLocation = new LatLng (location[0], location[1]);
+                plantLocation = new LatLng(location[0], location[1]);
                 plantName = database.getFullDatabase().get(dataIndex).getCommonName().getObj();
-                Marker marker = googleMap.addMarker(new MarkerOptions().position(plantLocation).title(plantName).icon(BitmapDescriptorFactory.fromResource(R.drawable.flower_marker)));
+                Marker marker = googleMap.addMarker(new MarkerOptions().position(
+                        plantLocation).title(plantName).icon(
+                        BitmapDescriptorFactory.fromResource(R.drawable.flower_marker)));
                 marker.setTag(plantID);
                 plantMarkerList.add(marker);
             }
@@ -276,16 +287,8 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         switch (requestCode) {
             case MY_PERMISSIONS_REQUEST_LOCATION: {
                 // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                    // permission was granted, yay!
-                    if (ActivityCompat.checkSelfPermission(this,
-                            Manifest.permission.ACCESS_FINE_LOCATION)
-                            == PackageManager.PERMISSION_GRANTED) {
-                        mGoogleMap.setMyLocationEnabled(true);
-                    }
-                } else {
+                if (grantResults.length <= 0
+                        || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
                     // permission denied,Disable the functionality that depends on this permission.
                     Toast.makeText(this, "permission denied", Toast.LENGTH_LONG).show();
                 }
@@ -293,3 +296,4 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         }
     }
 }
+

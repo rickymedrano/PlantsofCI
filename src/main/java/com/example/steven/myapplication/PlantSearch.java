@@ -54,9 +54,18 @@ public class PlantSearch extends AppCompatActivity implements OpenDatabase {
         DatabaseSearch dataSearch = new DatabaseSearch(inputStream, xmlParser);
         return dataSearch;
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent recievedIntent = getIntent();
+
+        // check to see if the intent is coming from the interactive map
+        if (recievedIntent.getStringExtra("buildingName") != null) {
+            // set the filter to building
+            String buildingName = recievedIntent.getStringExtra("buildingName");
+        }
+
         setContentView(R.layout.plant_list);
         //This is so the keyboard doesn't auto pop-up on Plant List page
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
@@ -87,10 +96,12 @@ public class PlantSearch extends AppCompatActivity implements OpenDatabase {
                 @Override
                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 }
+
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     adapter.getFilter().filter(s.toString());
                 }
+
                 @Override
                 public void afterTextChanged(Editable s) {
                 }
@@ -102,8 +113,9 @@ public class PlantSearch extends AppCompatActivity implements OpenDatabase {
         }
         //Sort ArrayList in alphabetical order by Common Name
     }
+
     public class DataItemAdapter extends RecyclerView.Adapter<DataItemAdapter.ViewHolder> implements
-        Filterable {
+            Filterable {
         //Create filtered plant database and custom filter
         private List<XMLParser.Entry> plantItems;
         private DataItemAdapter.CustomFilter mFilter;
@@ -114,9 +126,11 @@ public class PlantSearch extends AppCompatActivity implements OpenDatabase {
             mContext = context;
             mFilter = new CustomFilter(DataItemAdapter.this);
         }
+
         @Override
         public DataItemAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, null);
+            View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item,
+                    null);
             DataItemAdapter.ViewHolder
                     viewHolder = new DataItemAdapter.ViewHolder(itemView);
             return viewHolder;
@@ -129,7 +143,9 @@ public class PlantSearch extends AppCompatActivity implements OpenDatabase {
 
             //Set name and icon
             holder.tvName.setText(item.getCommonName().getObj());
-            Picasso.get().load("file:///android_asset/PlantIcons/" + Integer.toString(position+1) + "_2_1.png").placeholder(R.drawable.cast_album_art_placeholder).into(holder.imageView);
+            Picasso.get().load("file:///android_asset/PlantIcons/" + Integer.toString(position + 1)
+                    + "_2_1.png").placeholder(R.drawable.cast_album_art_placeholder).into(
+                    holder.imageView);
             //holder.imageView.setImageResource(R.drawable.african_tulip_tree_icon);
 
             //Go to prospective plant page based on plantID
@@ -153,6 +169,7 @@ public class PlantSearch extends AppCompatActivity implements OpenDatabase {
         public Filter getFilter() {
             return mFilter;
         }
+
         public class ViewHolder extends RecyclerView.ViewHolder {
 
             public TextView tvName;
@@ -171,10 +188,12 @@ public class PlantSearch extends AppCompatActivity implements OpenDatabase {
 
         public class CustomFilter extends Filter {
             DataItemAdapter mAdapter;
+
             private CustomFilter(DataItemAdapter mAdapter) {
                 super();
                 this.mAdapter = mAdapter;
             }
+
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {
                 filteredDatabase.clear();
@@ -184,7 +203,8 @@ public class PlantSearch extends AppCompatActivity implements OpenDatabase {
                 } else {
                     final String filterPattern = constraint.toString().toLowerCase().trim();
                     for (final XMLParser.Entry mWords : sampleDatabase) {
-                        if (mWords.getCommonName().getObj().toLowerCase().startsWith(filterPattern)) {
+                        if (mWords.getCommonName().getObj().toLowerCase().startsWith(
+                                filterPattern)) {
                             filteredDatabase.add(mWords);
                         }
                     }
@@ -194,9 +214,11 @@ public class PlantSearch extends AppCompatActivity implements OpenDatabase {
                 results.count = filteredDatabase.size();
                 return results;
             }
+
             @Override
             protected void publishResults(CharSequence constraint, FilterResults results) {
-                System.out.println("Count Number 2 " + ((List<XMLParser.Entry>) results.values).size());
+                System.out.println(
+                        "Count Number 2 " + ((List<XMLParser.Entry>) results.values).size());
                 this.mAdapter.notifyDataSetChanged();
             }
         }
