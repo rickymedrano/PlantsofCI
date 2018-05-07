@@ -3,6 +3,7 @@ package com.example.steven.myapplication;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -33,8 +34,6 @@ import java.util.List;
 /**
  * Created by Tyler on 3/5/2018.
  */
-
-// http://www.zoftino.com/google-maps-android-custom-info-window-example
 
 @SuppressWarnings("ALL")
 public class InteractiveMap extends FragmentActivity implements OnMapReadyCallback, OpenDatabase {
@@ -93,7 +92,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
 
         // create LatLngBounds for the CI campus
         LatLngBounds CI = new LatLngBounds(new LatLng(34.159002, -119.048463),
-                new LatLng(34.165051, -119.040445));
+                new LatLng(34.171489, -119.040296));
 
         CameraPosition cameraPosition = new CameraPosition.Builder().target(
                 new LatLng(34.162081, -119.043616)).zoom(16).build();
@@ -110,7 +109,7 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         googleMap.getUiSettings().setMyLocationButtonEnabled(false);
         googleMap.getUiSettings().setMapToolbarEnabled(false);
 
-        // set markers, plants, buildings, etc.
+        // set markers, plants and buildings on camera change
         googleMap.setOnCameraChangeListener(new OnCameraChangeListener() {
             @Override
             public void onCameraChange(CameraPosition cameraPosition) {
@@ -124,19 +123,55 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
             }
         });
 
+        // set plant merkers visible if user is within a certain range of plant
+        googleMap.setOnMyLocationChangeListener(new GoogleMap.OnMyLocationChangeListener() {
+            @Override
+            public void onMyLocationChange(Location userLocation) {
+                Location plantLocation = new Location("plantLocation");
+                Float[] plantLatLng;
+                float distance = -1;
+                int plantIDIndex = 0;
+                for (Marker m : plantMarkerList) {
+                    plantLatLng = database.getFullDatabase().get(plantIDIndex).getGPS().getObj();
+                    plantLocation.setLatitude((double) plantLatLng[0]);
+                    plantLocation.setLongitude((double) plantLatLng[1]);
 
+                    // distance between the location and marker is 5 meters
+                    if ((distance = userLocation.distanceTo(plantLocation)) <= 5) {
+                        m.setVisible(true);
+                    }
+                    plantIDIndex++;
+                }
+            }
+        });
+
+        // start the marker's respective activity
         googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
             @Override
             public void onInfoWindowClick(Marker marker) {
-                for(int plantIDIndex = 0; plantIDIndex < database.getFullDatabase().size(); plantIDIndex++ )
-                {
-                    int plantID = database.getFullDatabase().get(plantIDIndex).getPlantID().getObj();
-                    if(marker.getTag().equals(plantID))
-                    {
-                        Intent intent = new Intent(InteractiveMap.this, PlantSpecification.class);
-                        intent.putExtra("plantID", plantID);
-                        startActivity(intent);
+                // check to see if plant marker
+                if (marker.getTag() instanceof Integer) {
+                    int plantID = -1;
+                    for (int plantIDIndex = 0; plantIDIndex < database.getFullDatabase().size();
+                            plantIDIndex++) {
+                        plantID = database.getFullDatabase().get(
+                                plantIDIndex).getPlantID().getObj();
+                        // start activity for plant specification page
+                        if (marker.getTag().equals(plantID)) {
+                            Intent intent = new Intent(InteractiveMap.this,
+                                    PlantSpecification.class);
+                            intent.putExtra("plantID", plantID);
+                            startActivity(intent);
+                        }
                     }
+                }
+                // building marker
+                else {
+                    // start activity for plant list of buidling
+                    String buildingName = (String) marker.getTag();
+                    Intent intent = new Intent(InteractiveMap.this, PlantSearch.class);
+                    intent.putExtra("buildingName", buildingName);
+                    startActivity(intent);
                 }
             }
         });
@@ -227,13 +262,14 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
             Float[] location;
             LatLng plantLocation;
             String plantName;
-            for (int dataIndex = 0; dataIndex < database.getFullDatabase().size(); dataIndex++)
-            {
-                plantID =  database.getFullDatabase().get(dataIndex).getPlantID().getObj();
+            for (int dataIndex = 0; dataIndex < database.getFullDatabase().size(); dataIndex++) {
+                plantID = database.getFullDatabase().get(dataIndex).getPlantID().getObj();
                 location = database.getFullDatabase().get(dataIndex).getGPS().getObj();
-                plantLocation = new LatLng (location[0], location[1]);
+                plantLocation = new LatLng(location[0], location[1]);
                 plantName = database.getFullDatabase().get(dataIndex).getCommonName().getObj();
-                Marker marker = googleMap.addMarker(new MarkerOptions().position(plantLocation).title(plantName).icon(BitmapDescriptorFactory.fromResource(R.drawable.flower_marker)));
+                Marker marker = googleMap.addMarker(new MarkerOptions().position(
+                        plantLocation).title(plantName).icon(
+                        BitmapDescriptorFactory.fromResource(R.drawable.flower_marker)));
                 marker.setTag(plantID);
                 plantMarkerList.add(marker);
             }
@@ -275,16 +311,8 @@ public class InteractiveMap extends FragmentActivity implements OnMapReadyCallba
         switch (requestCode) {
             case MY_PERMISSIONS_REQUEST_LOCATION: {
                 // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                    // permission was granted, yay!
-                    if (ActivityCompat.checkSelfPermission(this,
-                            Manifest.permission.ACCESS_FINE_LOCATION)
-                            == PackageManager.PERMISSION_GRANTED) {
-                        mGoogleMap.setMyLocationEnabled(true);
-                    }
-                } else {
+                if (grantResults.length <= 0
+                        || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
                     // permission denied,Disable the functionality that depends on this permission.
                     Toast.makeText(this, "permission denied", Toast.LENGTH_LONG).show();
                 }
