@@ -7,12 +7,12 @@
         android:orderInCategory="100"
         android:icon="@drawable/toolbar_filter_icon"
         app:showAsAction="ifRoom"/>
-    <item android:id="@+id/filterdrought"
-        android:title="FilterDrought"
+    <item android:id="@+id/sortdrought"
+        android:title="Sort by Drought Tolerance"
         app:showAsAction="never"
         />
-    <item android:id="@+id/filterlocation"
-        android:title="FilterLocation"
+    <item android:id="@+id/sortcommonname"
+        android:title="Sort by Common Name"
         app:showAsAction="never"
         />
 </menu>

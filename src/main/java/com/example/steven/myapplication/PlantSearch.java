@@ -13,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,6 +26,7 @@ import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import static com.example.steven.myapplication.DatabaseSearch.*;
 
 
 import com.squareup.picasso.Picasso;
@@ -138,8 +140,32 @@ public class PlantSearch extends AppCompatActivity implements OpenDatabase {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        RecyclerView recyclerView = findViewById(R.id.rvItems);
         switch (item.getItemId()) {
-            case R.id.filter:
+            case R.id.sortdrought:
+                for (int i = 0; i < filteredDatabase.size(); i++)
+                {
+                    if(filteredDatabase.get(i).getDrought().getObj().equals("Yes"))
+                    {
+                        filteredDatabase.remove(i);
+                    }
+                }
+                adapter = new DataItemAdapter(this, filteredDatabase);
+                recyclerView.setAdapter(adapter);
+                return true;
+            case R.id.sortcommonname:
+//                database.setSortByCommon();
+//                filteredDatabase = database.sortCurrentDatabase(filteredDatabase);
+//                String databasesize = "size of filteredDatabase: " + filteredDatabase.size();
+//                Log.d("list size", databasesize);
+                Collections.sort(filteredDatabase, new Comparator<XMLParser.Entry>() {
+                    @Override
+                    public int compare(XMLParser.Entry o1, XMLParser.Entry o2) {
+                        return o1.getCommonName().getObj().compareTo(o2.getCommonName().getObj());
+                    }
+                });
+                adapter = new DataItemAdapter(this, filteredDatabase);
+                recyclerView.setAdapter(adapter);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

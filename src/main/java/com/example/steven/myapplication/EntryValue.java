@@ -12,4 +12,14 @@ public class EntryValue <T>{
     public T getObj() {
         return this.obj;
     }
+
+    public boolean compare(T compareEntry){
+        boolean check = false;
+
+        if(obj.equals(compareEntry)){
+            check = true;
+        }
+
+        return check;
+    }
 }
