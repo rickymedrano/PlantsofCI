@@ -55,5 +55,9 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Can't connect to mapping service", Toast.LENGTH_SHORT).show();
         }
         return false;
+
     }
+
+
 }
+

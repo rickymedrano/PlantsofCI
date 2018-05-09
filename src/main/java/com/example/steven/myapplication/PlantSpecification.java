@@ -47,13 +47,8 @@ public class PlantSpecification extends AppCompatActivity implements OpenDatabas
         plantSpecies.setText(database.getFullDatabase().get(plantID).getSpeciesName().getObj());
         //Set Location
         TextView plantLocation = findViewById(R.id.location);
-        String[] location = database.getFullDatabase().get(plantID).getLocation().getObj();
-        StringBuilder stringLocation = new StringBuilder();
-        for (int i = 0; i < location.length; i++)
-        {
-            stringLocation.append(location[i]);
-        }
-        plantLocation.setText(stringLocation);
+        String location = database.getFullDatabase().get(plantID).getLocation().getObj();
+        plantLocation.setText(location);
         //Set Flower Color
         TextView plantFlowerColor = findViewById(R.id.flowercolor);
         plantFlowerColor.setText(database.getFullDatabase().get(plantID).getFlowerColor().getObj());
@@ -66,7 +61,7 @@ public class PlantSpecification extends AppCompatActivity implements OpenDatabas
         //Set Drought Tolerance
         TextView plantDroughtTolerance = findViewById(R.id.drought);
         plantDroughtTolerance.setText(database.getFullDatabase().get(plantID).getDrought().getObj());
-//        //Set Height
+        //Set Height
         TextView plantHeight = findViewById(R.id.plantHeight);
         plantHeight.setText(database.getFullDatabase().get(plantID).getPlantHeight().getObj());
         //Set Width

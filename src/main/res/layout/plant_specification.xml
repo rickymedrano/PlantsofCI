@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_cream"
-    tools:context="com.example.steven.myapplication.PlantSpecification">
+    tools:context="com.example.steven.myapplication.PlantSpecification"
+    android:background="@color/light_cream">
 
 
     <TextView
@@ -23,55 +23,59 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText,UnknownId"
-        android:textColor="@color/dark_green_text" />
+        android:textColor="@color/dark_green_text"/>
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="351dp"
+        android:layout_width="357dp"
         android:layout_height="260dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/editText"
         android:layout_marginTop="8dp"
+        android:textColor="@color/dark_green_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/plantTitle"
-        tools:ignore="UnknownId"
-        android:textColor="@color/dark_green_text"/>
+        tools:ignore="UnknownId" />
 
     <TextView
         android:id="@+id/speciesname"
         android:layout_width="230dp"
         android:layout_height="30dp"
         android:layout_below="@+id/editText"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="328dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:singleLine="false"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        app:layout_constraintBottom_toTopOf="@+id/location"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Species_name"
+        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="TextViewEdits,UnknownId"
         android:textColor="@color/dark_green_text"/>
 
     <TextView
         android:id="@+id/location"
         android:layout_width="230dp"
-        android:layout_height="30dp"
+        android:layout_height="33dp"
         android:layout_alignEnd="@+id/imageView2"
         android:layout_alignRight="@+id/imageView2"
         android:layout_below="@+id/imageView2"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintBottom_toTopOf="@+id/flowercolor"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/Location"
+        app:layout_constraintTop_toBottomOf="@+id/speciesname"
         android:textColor="@color/dark_green_text"/>
 
     <TextView
@@ -79,8 +83,7 @@
         android:layout_width="230dp"
         android:layout_height="30dp"
         android:layout_below="@+id/editText3"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="0dp"
         android:layout_toEndOf="@+id/guideline"
         android:layout_toRightOf="@+id/guideline"
         android:ems="10"
@@ -88,10 +91,12 @@
         android:singleLine="false"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        app:layout_constraintBottom_toTopOf="@+id/origin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/Flower_Color"
+        app:layout_constraintTop_toBottomOf="@+id/location"
         tools:ignore="TextViewEdits,UnknownId"
+        android:layout_marginLeft="8dp"
         android:textColor="@color/dark_green_text"/>
 
     <TextView
@@ -101,16 +106,15 @@
         android:layout_above="@+id/flowercolor"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:singleLine="false"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        app:layout_constraintBottom_toTopOf="@+id/bloomseason"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/Origin"
+        app:layout_constraintTop_toBottomOf="@+id/flowercolor"
         tools:ignore="TextViewEdits"
         android:textColor="@color/dark_green_text"/>
 
@@ -119,23 +123,24 @@
         android:layout_width="230dp"
         android:layout_height="30dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintBottom_toTopOf="@+id/drought"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/Bloomseason"
+        app:layout_constraintTop_toBottomOf="@+id/origin"
+        android:layout_marginRight="8dp"
         android:textColor="@color/dark_green_text"/>
 
     <TextView
         android:id="@+id/drought"
-        android:layout_width="230dp"
-        android:layout_height="30dp"
+        android:layout_width="231dp"
+        android:layout_height="31dp"
         android:layout_above="@+id/textView3"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="476dp"
         android:layout_toEndOf="@+id/guideline"
         android:layout_toRightOf="@+id/guideline"
         android:ems="10"
@@ -143,10 +148,12 @@
         android:singleLine="false"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/droughttolerance"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038"
         tools:ignore="TextViewEdits,UnknownId"
         android:textColor="@color/dark_green_text"/>
 
@@ -189,6 +196,11 @@
         android:textColor="@color/dark_green_text"/>
 
 
+
+
+
+
+
     <TextView
         android:id="@+id/Species_name"
         android:layout_width="135dp"
@@ -197,33 +209,36 @@
         android:layout_marginTop="328dp"
         android:text="@string/species_name"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintEnd_toStartOf="@+id/speciesname"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/dark_green_text"/>
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/green_text_background"/>
 
     <TextView
         android:id="@+id/Location"
         android:layout_width="135dp"
         android:layout_height="30dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:text="@string/location"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Species_name"
-        android:textColor="@color/dark_green_text"/>
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/green_text_background"/>
 
     <TextView
         android:id="@+id/Flower_Color"
         android:layout_width="135dp"
         android:layout_height="30dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:text="@string/flower_color"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Location"
-        android:textColor="@color/dark_green_text"/>
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/green_text_background"/>
 
     <TextView
         android:id="@+id/Origin"
@@ -234,26 +249,26 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Flower_Color"
-        android:textColor="@color/dark_green_text"/>
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/green_text_background"/>
 
     <TextView
         android:id="@+id/Bloomseason"
         android:layout_width="135dp"
         android:layout_height="30dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:text="@string/bloomseason"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Origin"
-        android:textColor="@color/dark_green_text"/>
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/green_text_background"/>
 
     <TextView
         android:id="@+id/droughttolerance"
         android:layout_width="135dp"
         android:layout_height="30dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:text="@string/drought_tolerance"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
@@ -261,38 +276,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Bloomseason"
         app:layout_constraintVertical_bias="0.0"
-        android:textColor="@color/dark_green_text"/>
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/green_text_background"/>
+
 
 
     <TextView
         android:id="@+id/height"
         android:layout_width="170dp"
         android:layout_height="21dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="@string/height"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.04"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/droughttolerance"
-        android:textColor="@color/dark_green_text"/>
+        app:layout_constraintBottom_toTopOf="@+id/plantHeight"
+        app:layout_constraintEnd_toStartOf="@+id/width"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/drought"
+        android:textColor="@color/green_text_background"/>
 
     <TextView
         android:id="@+id/width"
         android:layout_width="170dp"
         android:layout_height="20dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="@string/width"
         android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/plantWidth"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.959"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/height"
         app:layout_constraintTop_toBottomOf="@+id/drought"
-        android:textColor="@color/dark_green_text"/>
+        android:textColor="@color/green_text_background"/>
 
 
     <android.support.constraint.Guideline
@@ -330,12 +343,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
 
 
 </android.support.constraint.ConstraintLayout>
