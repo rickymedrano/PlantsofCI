@@ -70,10 +70,6 @@ public class PlantSearch extends AppCompatActivity implements OpenDatabase {
         Intent recievedIntent = getIntent();
 
         // check to see if the intent is coming from the interactive map
-        if (recievedIntent.getStringExtra("buildingName") != null) {
-            // set the filter to building
-            String buildingName = recievedIntent.getStringExtra("buildingName");
-        }
         setContentView(R.layout.plant_list);
         //Toolbar implementation
         toolbar = findViewById(R.id.toolbar2);
@@ -96,17 +92,44 @@ public class PlantSearch extends AppCompatActivity implements OpenDatabase {
             filteredDatabase.addAll(sampleDatabase);
             //Retrieve search editText
             searchBox = findViewById(R.id.search_box);
-            //Retrieve RecyclerView resource
-            RecyclerView recyclerView = findViewById(R.id.rvItems);
-            //Make RecyclerView a linear layout
-            recyclerView.setLayoutManager(new LinearLayoutManager(this));
-            //Populate the dividing lines between the list of plants
-            recyclerView.addItemDecoration(new SimpleDividerItemDecoration(this));
-            assert recyclerView != null;
-            //Create the adapter object and pass it the plant database
-            adapter = new DataItemAdapter(this, filteredDatabase);
-            //Bind adapter to RecyclerView object
-            recyclerView.setAdapter(adapter);
+
+            if (recievedIntent.getStringExtra("buildingName") != null) {
+                // set the filter to building
+                String buildingName = recievedIntent.getStringExtra("buildingName");
+                Log.d("building name", buildingName);
+                sampleDatabase.clear();
+                sampleDatabase.add(1, filteredDatabase.get(1));
+                for (int i = 0; i < sampleDatabase.size(); i++)
+                {
+
+//                    if(sampleDatabase.get(i).getLocation().getObj().equals(buildingName))
+//                    {
+//                        sampleDatabase.remove(i);
+//                    }
+                }
+                //Retrieve RecyclerView resource
+                RecyclerView recyclerView = findViewById(R.id.rvItems);
+                //Make RecyclerView a linear layout
+                recyclerView.setLayoutManager(new LinearLayoutManager(this));
+                //Populate the dividing lines between the list of plants
+                recyclerView.addItemDecoration(new SimpleDividerItemDecoration(this));
+                assert recyclerView != null;
+                adapter = new DataItemAdapter(this, sampleDatabase);
+                recyclerView.setAdapter(adapter);
+            }
+            else {
+                //Retrieve RecyclerView resource
+                RecyclerView recyclerView = findViewById(R.id.rvItems);
+                //Make RecyclerView a linear layout
+                recyclerView.setLayoutManager(new LinearLayoutManager(this));
+                //Populate the dividing lines between the list of plants
+                recyclerView.addItemDecoration(new SimpleDividerItemDecoration(this));
+                assert recyclerView != null;
+                //Create the adapter object and pass it the plant database
+                adapter = new DataItemAdapter(this, filteredDatabase);
+                //Bind adapter to RecyclerView object
+                recyclerView.setAdapter(adapter);
+            }
             //Search box functionality
             searchBox.addTextChangedListener(new TextWatcher() {
                 @Override
@@ -154,10 +177,6 @@ public class PlantSearch extends AppCompatActivity implements OpenDatabase {
                 recyclerView.setAdapter(adapter);
                 return true;
             case R.id.sortcommonname:
-//                database.setSortByCommon();
-//                filteredDatabase = database.sortCurrentDatabase(filteredDatabase);
-//                String databasesize = "size of filteredDatabase: " + filteredDatabase.size();
-//                Log.d("list size", databasesize);
                 Collections.sort(filteredDatabase, new Comparator<XMLParser.Entry>() {
                     @Override
                     public int compare(XMLParser.Entry o1, XMLParser.Entry o2) {

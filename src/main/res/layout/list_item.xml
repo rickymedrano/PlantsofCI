@@ -28,5 +28,6 @@
         android:layout_toRightOf="@+id/imageView"
         android:text="A menu item"
         android:textSize="24sp"
+        android:textColor="@color/dark_green_text"
         tools:ignore="HardcodedText" />
 </RelativeLayout>

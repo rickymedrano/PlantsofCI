@@ -2,17 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/filter"
-        android:title="Filter"
-        android:orderInCategory="100"
-        android:icon="@drawable/toolbar_filter_icon"
-        app:showAsAction="ifRoom"/>
     <item android:id="@+id/sortdrought"
-        android:title="Sort by Drought Tolerance"
+        android:title="Filter By Drought Tolerance"
         app:showAsAction="never"
         />
     <item android:id="@+id/sortcommonname"
-        android:title="Sort by Common Name"
+        android:title="Filter By Common Name"
         app:showAsAction="never"
         />
 </menu>
