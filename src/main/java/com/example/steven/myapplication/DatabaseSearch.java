@@ -6,7 +6,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by traviswight on 4/9/18.
@@ -39,7 +41,7 @@ public class DatabaseSearch{
 
     // For Sorting
     /* ***** IMPORTANT FOR SORTING! READ THIS!!!! ***** */
-    // (step 1) call one of these first (common is set to true by default)
+    // (step 1) call one of these functions first.(common is set to true by default)
     public void setSortByCommon(){
         sortCommon = true;
         sortID = false;
@@ -78,30 +80,29 @@ public class DatabaseSearch{
 
     /* ***** IMPORTANT FOR FILTERING! ***** */
     // just call this function. Returns sorted filtered database with all EntryValues containing desired value.
+
     public List<XMLParser.Entry> filter(List<XMLParser.Entry> currentDatabase, int tag, String filterValue){
         /* ***** IMPORTANT FOR FILTERING! READ THIS!!!! ***** */
         // int tag = the tag in database you are filtering by (use FILTER_DROUGHT or FILTER_LOCATION)
         // String filterValue = value of tag you are searching:
 
-        EntryValue entryValue = new EntryValue<>(filterValue);
+        EntryValue<String> entryValue = new EntryValue<>(filterValue);
         return sortCurrentDatabase(searchDatabase(currentDatabase, entryValue, tag));
     }
 
     // if database is filtered, use that version of the database
 
-    private boolean compareEntryValues(EntryValue databaseValue, EntryValue compare){
-        boolean check = false;
-
-        if((databaseValue.getObj() instanceof String && compare.getObj() instanceof String) ||
-                (databaseValue.getObj() instanceof Integer && compare.getObj() instanceof Integer)){
-            check = databaseValue.equals(compare);
-        }
-
+    /* DON'T WORRY ABOUT THESE */
+    //************************************************************************
+    private boolean compareEntryValues(EntryValue<String> databaseValue, EntryValue<String> compare){
+        boolean check = databaseValue.getObj().equals(compare.getObj());
         return check;
     }
 
-    /* DON'T WORRY ABOUT THESE */
-    //************************************************************************
+    private boolean compareIntegerValues(EntryValue<Integer> databaseValue, EntryValue<Integer> compare){
+        return databaseValue.getObj().equals(compare.getObj());
+    }
+
     private List<XMLParser.Entry> sortByCommon(List<XMLParser.Entry> entries){
         List<String> getCommonnames = getAllCommonnames(entries);
         List<XMLParser.Entry> sortedEntries = new ArrayList<>();
@@ -109,7 +110,7 @@ public class DatabaseSearch{
 
         for(int i = 0; i < getCommonnames.size(); i++){
             currentCommonname = new EntryValue<>(getCommonnames.get(i));
-            sortedEntries.set(i, searchDatabase(entries, currentCommonname).get(0));
+            sortedEntries.add(searchDatabaseForCommonName(entries, currentCommonname).get(0));
         }
 
         return sortedEntries;
@@ -122,7 +123,8 @@ public class DatabaseSearch{
 
         for(int i = 0; i < getLocations.size(); i++){
             currentLocations = new EntryValue<>(getLocations.get(i));
-            sortedEntries.addAll(searchDatabase(entries, currentLocations));
+            List<XMLParser.Entry> search = searchDatabaseForLocation(entries, currentLocations);
+            sortedEntries.addAll(search);
         }
 
         return sortedEntries;
@@ -135,7 +137,7 @@ public class DatabaseSearch{
 
         for(int i = 0; i < getIDs.size(); i++){
             currentCommonname = new EntryValue<>(getIDs.get(i));
-            sortedEntries.set(i, searchDatabase(entries, currentCommonname).get(0));
+            sortedEntries.add(searchDatabaseForID(entries, currentCommonname).get(0));
         }
 
         return sortedEntries;
@@ -155,17 +157,13 @@ public class DatabaseSearch{
 
     private List<String> getAllLocations(List<XMLParser.Entry> entries){
         List<String> locations = new ArrayList<>();
-        String location;
+        Set<String> locationSet = new HashSet<>();
 
         for (int i = 0; i < entries.size(); i++){
-            location = entries.get(i).getLocation().getObj();
-
-            if(locations.isEmpty() || !location.contains(location)){
-                locations.add(location);
-            }
-
+            locationSet.add(entries.get(i).getLocation().getObj());
         }
 
+        locations.addAll(locationSet);
         Collections.sort(locations);
 
         return locations;
@@ -183,20 +181,11 @@ public class DatabaseSearch{
         return ids;
     }
 
-    private List<XMLParser.Entry> searchDatabase(List<XMLParser.Entry> currentDatabase, EntryValue value){
+    private List<XMLParser.Entry> searchDatabaseForLocation(List<XMLParser.Entry> currentDatabase, EntryValue<String> value){
         List<XMLParser.Entry> entries = new ArrayList<>();
 
         for (int i = 0; i < currentDatabase.size(); i++){
-            if(compareEntryValues(currentDatabase.get(i).getPictureID(), value) ||
-                    compareEntryValues(currentDatabase.get(i).getCommonName(), value) ||
-                    compareEntryValues(currentDatabase.get(i).getSpeciesName(), value) ||
-                    compareEntryValues(currentDatabase.get(i).getOrigin(), value) ||
-                    compareEntryValues(currentDatabase.get(i).getFlowerColor(), value) ||
-                    compareEntryValues(currentDatabase.get(i).getBloomSeason(), value) ||
-                    compareEntryValues(currentDatabase.get(i).getPlantWidth(), value) ||
-                    compareEntryValues(currentDatabase.get(i).getPlantWidth(), value) ||
-                    compareEntryValues(currentDatabase.get(i).getDrought(), value) ||
-                    compareEntryValues(currentDatabase.get(i).getLocation(), value)){
+            if(compareEntryValues(currentDatabase.get(i).getLocation(), value)){
                 entries.add(currentDatabase.get(i));
             }
         }
@@ -204,7 +193,34 @@ public class DatabaseSearch{
         return entries;
     }
 
-    private List<XMLParser.Entry> searchDatabase(List<XMLParser.Entry> currentDatabase, EntryValue value, int tag){
+    private List<XMLParser.Entry> searchDatabaseForID(List<XMLParser.Entry> currentDatabase, EntryValue<Integer> value){
+        List<XMLParser.Entry> entries = new ArrayList<>();
+
+        for (int i = 0; i < currentDatabase.size(); i++){
+            if(compareIntegerValues(currentDatabase.get(i).getPlantID(), value)){
+                entries.add(currentDatabase.get(i));
+                break;
+            }
+        }
+
+        return entries;
+    }
+
+    private List<XMLParser.Entry> searchDatabaseForCommonName(List<XMLParser.Entry> currentDatabase, EntryValue<String> value){
+        List<XMLParser.Entry> entries = new ArrayList<>();
+
+        for (int i = 0; i < currentDatabase.size(); i++){
+            if(compareEntryValues(currentDatabase.get(i).getCommonName(), value)){
+                entries.add(currentDatabase.get(i));
+                break;
+            }
+        }
+
+        return entries;
+    }
+
+
+    private List<XMLParser.Entry> searchDatabase(List<XMLParser.Entry> currentDatabase, EntryValue<String> value, int tag){
         List<XMLParser.Entry> entries = new ArrayList<>();
 
         for (int i = 0; i < currentDatabase.size(); i++){
