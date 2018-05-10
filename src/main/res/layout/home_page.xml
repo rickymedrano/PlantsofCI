@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,76 +8,208 @@
     tools:context="com.example.steven.myapplication.MainActivity"
     tools:layout_editor_absoluteY="25dp">
 
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView27"
+        app:layout_constraintStart_toEndOf="@+id/imageView26"
+        app:srcCompat="@drawable/trigrouped_flower"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView24"
+        app:layout_constraintStart_toEndOf="@+id/imageView25"
+        app:srcCompat="@drawable/trigrouped_flower"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="37dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView17"
+        app:layout_constraintStart_toEndOf="@+id/imageView18"
+        app:srcCompat="@drawable/trigrouped_flower" />
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="34dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView27"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView17"
+        app:srcCompat="@drawable/grass_patch" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="34dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView25"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView26"
+        app:srcCompat="@drawable/grass_patch" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="34dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView25"
+        app:srcCompat="@drawable/grass_patch" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="34dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView24"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView27"
+        app:srcCompat="@drawable/grass_patch" />
+
     <TextView
         android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:background="@color/opaquewhite"
         android:ems="10"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/roboto_mono_light"
         android:text="@string/plants_of_ci"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
+        android:textColor="@color/dark_green_text"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="186dp"
         android:layout_height="48dp"
-        android:layout_marginTop="384dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="372dp"
+        android:background="@drawable/roundedbackground"
         android:onClick="interactiveMapButton"
         android:text="@string/interactive_map"
+        android:textColor="@color/light_cream"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.791"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Title"/>
+        app:layout_constraintTop_toBottomOf="@+id/Title" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="194dp"
         android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/roundedbackground"
         android:onClick="plantSearchButton"
         android:text="@string/plant_search"
-        app:layout_constraintBottom_toTopOf="@+id/About"
+        android:textColor="@color/light_cream"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.781"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="1.0"/>
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/About"
         android:layout_width="wrap_content"
         android:layout_height="53dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="@string/about"
         android:onClick="aboutButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_info_details"
-        android:layout_marginRight="40dp" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.888"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="-27dp"/>
+        app:layout_constraintGuide_begin="-27dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="547dp"/>
+        app:layout_constraintGuide_end="547dp" />
 
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="34dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView26"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView18"
+        app:srcCompat="@drawable/grass_patch" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="34dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView17"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/grass_patch" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView26"
+        app:layout_constraintStart_toEndOf="@+id/imageView17"
+        app:srcCompat="@drawable/flower" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView25"
+        app:layout_constraintStart_toEndOf="@+id/imageView27"
+        app:srcCompat="@drawable/flower" />
 
 
 </android.support.constraint.ConstraintLayout>

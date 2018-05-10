@@ -49,6 +49,7 @@ public class PlantSearch extends AppCompatActivity implements OpenDatabase {
     DatabaseSearch database;
     List<XMLParser.Entry> sampleDatabase;
     List<XMLParser.Entry> filteredDatabase;
+    List<XMLParser.Entry> plantsByLocationDatabase;
     //RecyclerView Adapter object
     DataItemAdapter adapter;
     //Search edit box for narrowing plant list
@@ -90,22 +91,23 @@ public class PlantSearch extends AppCompatActivity implements OpenDatabase {
             //Create new database for filtered plant entries
             filteredDatabase = new ArrayList<>();
             filteredDatabase.addAll(sampleDatabase);
+            //Create an empty database to hold plants by specific building
+            plantsByLocationDatabase = new ArrayList<>(40);
             //Retrieve search editText
             searchBox = findViewById(R.id.search_box);
 
             if (recievedIntent.getStringExtra("buildingName") != null) {
                 // set the filter to building
                 String buildingName = recievedIntent.getStringExtra("buildingName");
-                Log.d("building name", buildingName);
-                sampleDatabase.clear();
-                sampleDatabase.add(1, filteredDatabase.get(1));
-                for (int i = 0; i < sampleDatabase.size(); i++)
+                //plantsByLocationDatabase.add(0, filteredDatabase.get(0));
+                for (int i = 0; i < filteredDatabase.size(); i++)
                 {
-
-//                    if(sampleDatabase.get(i).getLocation().getObj().equals(buildingName))
-//                    {
-//                        sampleDatabase.remove(i);
-//                    }
+                    //plantsByLocationDatabase.add(0, filteredDatabase.get(0));
+                    if(filteredDatabase.get(i).getLocation().getObj().equals(buildingName))
+                    {
+                        Log.d("building name", buildingName);
+                        plantsByLocationDatabase.add(filteredDatabase.get(i));
+                    }
                 }
                 //Retrieve RecyclerView resource
                 RecyclerView recyclerView = findViewById(R.id.rvItems);
@@ -114,7 +116,7 @@ public class PlantSearch extends AppCompatActivity implements OpenDatabase {
                 //Populate the dividing lines between the list of plants
                 recyclerView.addItemDecoration(new SimpleDividerItemDecoration(this));
                 assert recyclerView != null;
-                adapter = new DataItemAdapter(this, sampleDatabase);
+                adapter = new DataItemAdapter(this, plantsByLocationDatabase);
                 recyclerView.setAdapter(adapter);
             }
             else {

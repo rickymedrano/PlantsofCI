@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_page);
     }
-    
+
     public void interactiveMapButton(View view) {
 
         // make sure google map services are working
@@ -55,5 +55,8 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Can't connect to mapping service", Toast.LENGTH_SHORT).show();
         }
         return false;
+
     }
+
+
 }
