@@ -10,6 +10,9 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.io.InputStream;
 
+import jp.wasabeef.picasso.transformations.CropCircleTransformation;
+import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
+
 
 public class PlantSpecification extends AppCompatActivity implements OpenDatabase {
     DatabaseSearch database;
@@ -69,7 +72,7 @@ public class PlantSpecification extends AppCompatActivity implements OpenDatabas
         plantWidth.setText(database.getFullDatabase().get(plantID).getPlantWidth().getObj());
         //Set Image
         ImageView imageView = (ImageView)findViewById(R.id.imageView2);
-        Picasso.get().load("file:///android_asset/PlantPictures/" + Integer.toString(plantID+1) + "-1.png").placeholder(R.drawable.cast_album_art_placeholder).into(imageView);
+        Picasso.get().load("file:///android_asset/PlantPictures/" + Integer.toString(plantID+1) + "-1.png").placeholder(R.drawable.cast_album_art_placeholder).transform(new RoundedCornersTransformation(10,10)).resize(350,250).into(imageView);
 
     }
 }
