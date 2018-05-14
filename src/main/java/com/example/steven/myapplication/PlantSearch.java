@@ -222,10 +222,15 @@ public class PlantSearch extends AppCompatActivity implements OpenDatabase {
 
             //Set name and icon
             holder.tvName.setText(item.getCommonName().getObj());
-            Picasso.get().load("file:///android_asset/PlantIcons/" + Integer.toString(position + 1)
+
+            Picasso.get().load("file:///android_asset/PlantIcons/" + Integer.toString(item.getPlantID().getObj()+1)
                     + "_2_1.png").placeholder(R.drawable.cast_album_art_placeholder).into(
                     holder.imageView);
-            //holder.imageView.setImageResource(R.drawable.african_tulip_tree_icon);
+
+
+//            Picasso.get().load("file:///android_asset/PlantIcons/" + Integer.toString(position + 1)
+//                    + "_2_1.png").placeholder(R.drawable.cast_album_art_placeholder).into(
+//                    holder.imageView);
 
             //Go to prospective plant page based on plantID
             holder.mView.setOnClickListener(new View.OnClickListener() {
