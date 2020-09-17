@@ -8,17 +8,17 @@ Ricky Medrano, Tyler Allen, Steven Romp, Travis Wight
 
 
 <p align="center">
-  <img src="./screenshots/titlePic.png" alt="Title Picture">
+  <img src="./Screenshots/4.png" alt="Homescreen">
 </p>
 
 <p align="center">
-  <img src="./screenshots/titlePic.png" alt="Title Picture">
+  <img src="./Screenshots/3.png" alt="Goole Map">
 </p>
 
 <p align="center">
-  <img src="./screenshots/titlePic.png" alt="Title Picture">
+  <img src="./Screenshots/1.png" alt="Sortable List">
 </p>
 
 <p align="center">
-  <img src="./screenshots/titlePic.png" alt="Title Picture">
+  <img src="./Screenshots/2.png" alt="Plant Info Page">
 </p>
